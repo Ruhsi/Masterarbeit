@@ -1,0 +1,200 @@
+%%% File encoding: UTF-8
+%% äöüÄÖÜß  <-- no German Umlauts here? Use an UTF-8 compatible editor!
+
+%%% Magic comments for setting the correct parameters in compatible IDEs
+% !TeX encoding = utf8
+% !TeX program = pdflatex 
+% !TeX spellcheck = de_DE
+% !BIB program = biber
+
+\documentclass[master,german]{hgbthesis}
+% Permissible options in [..]: 
+%   Type of work: diploma, master (default), bachelor, internship 
+%   Main language: german, english (default)
+%%%----------------------------------------------------------
+
+\RequirePackage[utf8]{inputenc}		% Remove when using lualatex or xelatex entfernen!
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{minted}
+\usepackage{listings}
+\usepackage{varioref}
+\usepackage{longtable}
+\usepackage{tabularx}
+\geometry{top=2.5cm,left=3.5cm,bottom=2.5cm,right=3.5cm}
+
+% -----------------------------------------------------
+\newenvironment{code}{\captionsetup{type=listing}}{}
+% -----------------------------------------------------
+% -----------------------------------------------------
+\newcommand{\mysubsubsection}[1]{{\subsubsection{\textbf{#1}}}}
+\newcommand{\mentionedtext}[1]{{\textit{{#1}}}}
+\newcommand{\sourceDir}{./sources}
+\newcommand{\sourceFontSize}{\fontsize{10pt}{11.5}}
+\newcommand{\quotes}[1]{``#1''}
+\newmintedfile[bashFile]{bash}{
+	linenos=false, 
+	frame=none, 
+	breaklines=true, 
+	tabsize=2,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	baselinestretch=1,
+	fontsize=\sourceFontSize
+}
+\newmintedfile[yamlFile]{yaml}{
+	linenos=false, 
+	frame=none, 
+	breaklines=true, 
+	tabsize=2,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	baselinestretch=1,
+	fontsize=\sourceFontSize
+}
+\newmintedfile[javaFile]{java}{
+	linenos=false, 
+	frame=none, 
+	breaklines=true, 
+	tabsize=2,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	baselinestretch=1,
+	fontsize=\sourceFontSize
+}
+\newmintedfile[xmlFile]{xml}{
+	breaklines=true, 
+	tabsize=2,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	baselinestretch=1,
+	autogobble=true,
+	breakautoindent=false,
+	fontsize=\sourceFontSize
+}
+\newmintinline[inlineJava]{java}{
+	fontsize=\sourceFontSize
+}
+\newmintinline[inlineBash]{bash}{
+	fontsize=\sourceFontSize
+}
+% -----------------------------------------------------
+\graphicspath{{images/}}    % location of images and graphics
+\logofile{logo}				% logo file = images/logo.pdf (use \logofile{} for no logo)
+\bibliography{references.bib}  	% name of bibliography file (references.bib)
+\setlength{\parindent}{0pt}
+\usepackage{titlesec}
+
+\titleformat{\section}[display]
+{\normalfont\bfseries}{}{0pt}{\Huge}
+
+\renewcommand*{\labelalphaothers}{}
+\DeclareLabelalphaTemplate{
+	\labelelement{
+		\field[final]{shorthand}
+		\field{labelname}
+		\field{label}
+	}
+	\labelelement{
+		\literal{,\addhighpenspace}
+	}
+	\labelelement{
+		\field{year}
+	}
+}
+%%%----------------------------------------------------------
+% Title page entries
+%%%----------------------------------------------------------
+
+%%% Entries for ALL types of work: --------------------------
+\title{Implementierung einer Partnerdatenbank und Evaluierung des verwendeten Technologiestack} %no camel used (and Camel)
+%\author{Ing. Thomas Herzog B.Sc}
+%\programname{Software Engineering}
+\placeofstudy{Hagenberg}
+\dateofsubmission{2020}{05}{30}	% {YYYY}{MM}{DD}
+
+%%% Entries for Bachelor theses only: -----------------------
+%\thesisnumber{XXXXXXXXXX-A}   %e.g. 1310238045-A  
+% (Stud-ID, A = 1st Bachelor thesis)
+%\semester{Fall Semester 2017} 	% Fall/Spring Semester YYYY
+%\coursetitle{Introduction to Trivial Problems 1} 
+\advisor{FH-Prof. DI Dr. Herwig Mayr}
+
+%%% Restricted publication license instead of CC (master only):
+%\cclicense
+
+%%%----------------------------------------------------------
+\begin{document}
+%%%----------------------------------------------------------
+
+%%%----------------------------------------------------------
+\frontmatter							% title part (roman page numbers)
+%%%----------------------------------------------------------
+
+\includepdf{title.pdf}
+%\maketitle
+%\tableofcontents
+
+%\include{front/preface} 	% preface is optional
+%\include{front/abstract}
+
+%%%----------------------------------------------------------
+\mainmatter          			% main part (arabic page numbers)
+%%%----------------------------------------------------------
+
+\section{Titel der finalen Arbeit}
+Die 3 Banken IT GmbH möchte zur Verwaltung ihrer Parnter ein einheitliches System. Derzeit werden Partner in verschiedenen Systemen (z.B. SAP, Excel-Liste, Word-Dokument) abgelegt. Es soll eine Partnerdatenbank implementiert werden, die das Verwalten der Partner vereinfacht.
+Der Titel der finalen Arbeit lautet daher: \glqq \textbf{Implementierung einer Partnerdatenbank und Evaluierung des verwendeten Technologiestacks}\grqq.
+
+{\let\clearpage\relax \section{Motivation und Ziel}}
+Ziel dieser Arbeit ist die Erleichterung der Partnerverwaltung für die 3 Banken IT GmbH, sowie die Erlangung von Wissen und Erfahrung des Autors mit den verwendeten Technologien. Auch die Evaluierung der verwendeten Technologien wird als Ziel definiert, sodass der Autor in zukünftigen Projekten selbst die passende Technologie für verschiedene Anwendungsgebiete wählen kann.
+
+Dies ist zugleich die Motivation der Arbeit. Der Autor soll ein breit gefächertes Wissen über die aktuell vorhandenen und in der Praxis verwendeten Technologien erlangen und selbständig die Passendste für das jeweilige Projekt auswählen können.
+
+\section{Unternehmen}
+Die 3 Banken IT GmbH ist der IT-Dienstleister der 3-Banken-Gruppe. Zur 3-Banken-Gruppe gehören die drei Regionalbanken Oberbank AG, Bank für Tirol und Vorarlberg AG und die BKS Bank AG.
+Die Geschäftsführer der 3 Banken IT GmbH sind Karl Stöbich, MBA und Mag. Alexander Wiesinger, MBA. Der Standort ist in Linz.
+Das Dienstleistungsspektrum der 3 Banken IT GmbH umfasst:
+\begin{enumerate}
+	\item Applikationsentwicklung/Banken-Lösungen
+	\item IT - Security
+	\item Rechenzentrums– und IT-Infrastruktur-Dienstleistungen und
+	\item Outputservice \& ZV-Abwicklung
+\end{enumerate} 
+
+In der Zentrale Linz und in den beiden Kompetenzzentren in Klagenfurt und Innsbruck sind derzeit 254 Mitarbeiter beschäftigt.
+\cite{3BankenIT}
+
+\section{konkrete Aufgabenstellung}
+Die konkrete Aufgabenstellung ist die Implementierung einer Partnerdatenbank zur erleichterten Verwaltung der Partner. Zu den Partnern der 3 Banken IT GmbH zählen unter anderem die FH Oberösterreich, die Studiengesellschaft für Zusammenarbeit im Zahlungsverkehr GmbH, die Christian Doppler Forschungsgesellschaft, etc.
+Derzeit werden die Partner in unterschiedlichen Systemen gehalten und verwaltet. Dazu zählen SAP, eine Excel-Liste und unterschiedliche Kontaktdaten, die bei den Mitarbeitern selbst gehalten werden.
+
+Die Technologien für die Applikation werden von der 3 Banken IT GmbH festgelegt und sind
+\begin{enumerate}
+	\item eine Microsoft SQL Datenbank,
+	\item Springboot als Backend
+	\item und Angular als Frontend.
+\end{enumerate}
+
+Dazu soll mindestens der Erstkontakt, also die Aufnahme der Kontaktdaten des Partners, die graphische Darstellung der jeweiligen Partner, sowie die Kündigung und Löschung der Daten implementiert werden.
+
+Auch die Evaluierung der verwendeten Technologien in Bezug auf Vor- und Nachteile und Alternativen gehört zu den Aufgaben der Arbeit.
+
+\section{Vorgehensweise}
+
+\section{Organisatorische Details}
+
+\section{Wichtige Meilensteine}
+
+\section{Wichtige Literatur}
+
+
+%%%----------------------------------------------------------
+\MakeBibliography                     				% references
+%%%----------------------------------------------------------
+%%% special page for checking print size --------------------
+%\include{back/printbox}
+
+%%%----------------------------------------------------------
+\end{document}
+%%%----------------------------------------------------------

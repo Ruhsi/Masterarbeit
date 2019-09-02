@@ -1,0 +1,8 @@
+spec:
+  strategy:
+    type: "Rolling"
+    rollingParams:
+      updatePeriodSeconds: "5"
+      intervalSeconds: "5"
+      timeoutSeconds: "120"
+  replicas: "1"

@@ -81,7 +81,7 @@
       <file leaf-file-name="Address.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/service/model/Address.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
+            <state relative-caret-position="294">
               <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -438,12 +438,12 @@
       <workItem from="1563972708355" duration="1924000" />
       <workItem from="1563974788625" duration="12366000" />
       <workItem from="1566290388210" duration="1803000" />
-      <workItem from="1566293408623" duration="14299000" />
+      <workItem from="1566293408623" duration="15067000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30392000" />
+    <option name="totallyTimeSpent" value="31160000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -454,7 +454,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.32969153" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.32969153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -468,7 +468,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.38346884" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3292683" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3292683" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21272494" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
@@ -924,7 +924,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/service/model/Address.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
+        <state relative-caret-position="294">
           <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
