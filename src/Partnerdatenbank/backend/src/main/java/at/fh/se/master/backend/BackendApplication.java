@@ -1,10 +1,10 @@
 package at.fh.se.master.backend;
 
-import at.fh.se.master.backend.service.model.Address;
-import at.fh.se.master.backend.service.model.MailAddress;
-import at.fh.se.master.backend.service.model.Partner;
-import at.fh.se.master.backend.service.model.PhoneNumber;
+import at.fh.se.master.backend.security.model.Role;
+import at.fh.se.master.backend.security.model.Users;
+import at.fh.se.master.backend.service.model.*;
 import at.fh.se.master.backend.service.repository.PartnerRepository;
+import at.fh.se.master.backend.service.repository.UsersRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.CommandLineRunner;
@@ -14,9 +14,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @SpringBootApplication
@@ -27,8 +25,35 @@ public class BackendApplication {
     }
 
     @Bean
-    public CommandLineRunner commandLineRunner(PartnerRepository partnerRepository) {
+    public CommandLineRunner commandLineRunner(PartnerRepository partnerRepository, UsersRepository userRepository) {
         return args -> {
+
+            userRepository.deleteAll();
+            Role adminRole = new Role();
+            adminRole.setRole("ADMIN");
+
+            Role userRole = new Role();
+            userRole.setRole("USER");
+
+            Users user1 = new Users();
+            user1.setActive(1);
+            user1.setEmail("ruhsamchristoph@gmail.com");
+            user1.setName("Ruhsi");
+            user1.setLastName("Ruhsam");
+            user1.setPassword("chrisi");
+            user1.setRoles(new HashSet<Role>(){{add(adminRole);}});
+            userRepository.save(user1);
+
+            Users user2 = new Users();
+            user2.setActive(1);
+            user2.setEmail("christoph.ruhsam@gepardec.com");
+            user2.setName("Gepard");
+            user2.setLastName("Ruhsam");
+            user2.setPassword("gepard");
+            user2.setRoles(new HashSet<Role>(){{add(userRole);}});
+            userRepository.save(user2);
+
+
             partnerRepository.deleteAll();
 
             Partner p = new Partner();
@@ -74,6 +99,7 @@ public class BackendApplication {
                     }}
             );
             p.setPhoneNumbers(phoneNumbers);
+
 
             partnerRepository.save(p);
 

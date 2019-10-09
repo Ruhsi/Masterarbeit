@@ -1,0 +1,25 @@
+<mat-sidenav-container>
+  <mat-sidenav  #sidenav  opened mode="side" >
+    <mat-nav-list>
+      <a mat-list-item>
+        <h1>Partnerdatenbank</h1>
+      </a>
+
+      <a mat-list-item [routerLink]="[home]">
+        <mat-icon matListIcon (click)="sidenav.toggle()">home</mat-icon>Home
+      </a>
+      <a mat-list-item [routerLink]="[addpartner]">
+        <mat-icon matListIcon (click)="sidenav.toggle()">person_add</mat-icon>Partner hinzufügen
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header></app-header>
+    <div style="height: 88vh">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

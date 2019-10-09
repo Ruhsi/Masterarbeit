@@ -1,0 +1,199 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button>
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Name</ng-template>
+      <mat-list>
+        <mat-list-item>
+          <mat-form-field>
+            <input matInput placeholder="Titel" formControlName="titleCtrl" [(ngModel)]="partner.title">
+          </mat-form-field>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <mat-form-field>
+            <input matInput placeholder="Vorname" formControlName="firstNameCtrl" [(ngModel)]="partner.firstname"
+                   required>
+          </mat-form-field>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <mat-form-field>
+            <input matInput placeholder="Nachname" formControlName="lastNameCtrl" [(ngModel)]="partner.lastname"
+                   required>
+          </mat-form-field>
+        </mat-list-item>
+      </mat-list>
+
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Adresse</ng-template>
+      <mat-list>
+        <mat-list-item>
+          <mat-form-field>
+            <input matInput placeholder="Straße" formControlName="streetCtrl" [(ngModel)]="partner.address.street"
+                   required>
+          </mat-form-field>
+          <span></span>
+          <mat-form-field>
+            <input matInput placeholder="Hausnummer" formControlName="streetNumberCtrl"
+                   [(ngModel)]="partner.address.streetNumber" required>
+          </mat-form-field>
+        </mat-list-item>
+        <mat-divider [vertical]="true"></mat-divider>
+        <mat-list-item>
+          <mat-form-field>
+            <input matInput placeholder="PLZ" formControlName="postalCodeCtrl" [(ngModel)]="partner.address.postalCode"
+                   required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Stadt" formControlName="cityCtrl" [(ngModel)]="partner.address.city" required>
+          </mat-form-field>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-form-field>
+            <input matInput placeholder="Land" formControlName="countryCtrl" [(ngModel)]="partner.address.country"
+                   required>
+          </mat-form-field>
+        </mat-list-item>
+      </mat-list>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup">
+    <ng-template matStepLabel>Kontaktdaten</ng-template>
+    <form [formGroup]="thirdFormGroup">
+      <mat-list>
+        <mat-list-item>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Telefonnummer" formControlName="phoneNumberCtrl" (keydown.enter)="addPhoneNumber()">
+          </mat-form-field>
+          <label><input type="radio" name="privatePhoneCtrl" class="with-gap" formControlName="privatePhoneCtrl"
+                        [value]="true">&nbsp;
+            privat</label>&nbsp;
+          <label><input type="radio" name="privatePhoneCtrl" class="with-gap" formControlName="privatePhoneCtrl"
+                        [value]="false">&nbsp;
+            geschäftlich</label>
+          <button type="submit" mat-icon-button (click)="$event.preventDefault(); addPhoneNumber()">
+            <span><mat-icon>add</mat-icon></span>
+          </button>
+        </mat-list-item>
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Nummer</th>
+            <th>privat</th>
+            <th>entfernen</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let number of partner.phoneNumbers; let i = index">
+            <td>{{number.phoneNumber}}</td>
+            <td>{{number.isPrivate ? "privat" : "geschäftlich"}}</td>
+            <td>
+              <button mat-icon-button color="warn" (click)="removePhonenumber(i)">
+                <span><mat-icon>remove_circle</mat-icon></span>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <mat-form-field>
+            <input type="text" matInput placeholder="Email" formControlName="emailCtrl"  (keydown.enter)="addMailAddress()">
+          </mat-form-field>
+          <label><input type="radio" name="privateMailCtrl" class="with-gap" formControlName="privateMailCtrl"
+                        [value]="true">&nbsp;
+            privat</label>&nbsp;
+          <label><input type="radio" name="privateMailCtrl" class="with-gap" formControlName="privateMailCtrl"
+                        [value]="false">&nbsp;
+            geschäftlich</label>
+          <button type="submit" mat-icon-button (click)="$event.preventDefault(); addMailAddress()">
+            <span><mat-icon>add</mat-icon></span>
+          </button>
+        </mat-list-item>
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Nummer</th>
+            <th>privat</th>
+            <th>entfernen</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let mail of partner.mailadresses; let i = index">
+            <td>{{mail.mailAddress}}</td>
+            <td>{{mail.isPrivate ? "privat" : "geschäftlich"}}</td>
+            <td>
+              <button mat-icon-button color="warn" (click)="removeMailaddress(i)">
+                <span><mat-icon>remove_circle</mat-icon></span>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </mat-list>
+      <div>
+        <button type="button" mat-button matStepperPrevious>Back</button>
+        <button type="button" mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Partner</ng-template>
+    <mat-list>
+      <mat-list-item>
+        {{partner.title + " " + partner.firstname + " " + partner.lastname}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        {{partner.address.street + " " + partner.address.streetNumber}}
+      </mat-list-item>
+      <mat-list-item>
+        {{partner.address.postalCode + " " + partner.address.city}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      Telefonnummern:
+      <mat-grid-list cols="4" rowHeight="25px" *ngFor="let number of partner.phoneNumbers">
+        <mat-grid-tile
+          [colspan]="1">
+          {{number.phoneNumber}}
+        </mat-grid-tile>
+        <mat-grid-tile
+          [colspan]="1">
+          {{number.isPrivate ? "privat" : "geschäftlich"}}
+        </mat-grid-tile>
+      </mat-grid-list>
+      Mail-Adressen:
+      <mat-grid-list cols="4" rowHeight="25px" *ngFor="let mail of partner.mailadresses">
+        <mat-grid-tile
+          [colspan]="1">
+          {{mail.mailAddress}}
+        </mat-grid-tile>
+        <mat-grid-tile
+          [colspan]="1">
+          {{mail.isPrivate ? "privat" : "geschäftlich"}}
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-list>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="reset()">Reset</button>
+      <button mat-button (click)="addPartner()">Speichern</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
