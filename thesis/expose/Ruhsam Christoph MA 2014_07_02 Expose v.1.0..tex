@@ -154,12 +154,12 @@ Dies ist zugleich die Motivation der Arbeit. Der Autor soll ein breit gefächert
 \section{Unternehmen}
 Die 3 Banken IT GmbH ist der IT-Dienstleister der 3-Banken-Gruppe. Zur 3-Banken-Gruppe gehören die drei Regionalbanken Oberbank AG, Bank für Tirol und Vorarlberg AG und die BKS Bank AG.
 Die Geschäftsführer der 3 Banken IT GmbH sind Karl Stöbich, MBA und Mag. Alexander Wiesinger, MBA. Der Standort ist in Linz.
-Das Dienstleistungsspektrum der 3 Banken IT GmbH umfasst:
+Das Dienstleistungsspektrum der 3 Banken IT GmbH umfasst: \newline
 \begin{enumerate}
 	\item Applikationsentwicklung/Banken-Lösungen
 	\item IT - Security
 	\item Rechenzentrums– und IT-Infrastruktur-Dienstleistungen und
-	\item Outputservice \& ZV-Abwicklung
+	\item Outputservice \& ZV-Abwicklung \newline
 \end{enumerate} 
 
 In der Zentrale Linz und in den beiden Kompetenzzentren in Klagenfurt und Innsbruck sind derzeit 254 Mitarbeiter beschäftigt.
@@ -169,25 +169,54 @@ In der Zentrale Linz und in den beiden Kompetenzzentren in Klagenfurt und Innsbr
 Die konkrete Aufgabenstellung ist die Implementierung einer Partnerdatenbank zur erleichterten Verwaltung der Partner. Zu den Partnern der 3 Banken IT GmbH zählen unter anderem die FH Oberösterreich, die Studiengesellschaft für Zusammenarbeit im Zahlungsverkehr GmbH, die Christian Doppler Forschungsgesellschaft, etc.
 Derzeit werden die Partner in unterschiedlichen Systemen gehalten und verwaltet. Dazu zählen SAP, eine Excel-Liste und unterschiedliche Kontaktdaten, die bei den Mitarbeitern selbst gehalten werden.
 
-Die Technologien für die Applikation werden von der 3 Banken IT GmbH festgelegt und sind
+Die Technologien für die Applikation werden von der 3 Banken IT GmbH festgelegt und sind\newline
 \begin{enumerate}
 	\item eine Microsoft SQL Datenbank,
 	\item Springboot als Backend
-	\item und Angular als Frontend.
+	\item und Angular als Frontend. \newline 
 \end{enumerate}
+
 
 Dazu soll mindestens der Erstkontakt, also die Aufnahme der Kontaktdaten des Partners, die graphische Darstellung der jeweiligen Partner, sowie die Kündigung und Löschung der Daten implementiert werden.
 
 Auch die Evaluierung der verwendeten Technologien in Bezug auf Vor- und Nachteile und Alternativen gehört zu den Aufgaben der Arbeit.
 
 \section{Vorgehensweise}
+Die Vorgehensweise erfolgt inkrementell. Der Autor beschreibt während der Implementierung des Systems die wichtigsten Abschnitte in der Arbeit und nicht erst nach Fertigstellung der Applikation.
+Bei der Applikationsentwicklung werden mit der 3 Banken IT GmbH Teilabschnitte ausgemacht, bis wann, welche Funktionen fertiggestellt sein sollen, bzw. welche Features noch eingebaut werden können. Die Applikation selbst soll bis Ende Mai fertiggestellt und der 3 Banken IT GmbH übergeben werden.
+\newline \newline
+Zur Erstellung der Schrift wird zu Beginn ein Inhaltsverzeichnis inklusive Schätzungen der Seitenzahlen abgegeben. Danach wird mt dem Betreuer ein Probekapitel ausgemacht, das fertiggestellt wird und dem Betreuer zur Durchsicht abgegeben wird. Dies dient als Orientierung zum Verfassen der finalen Schrift. Die finale Schrift soll bist spätestens Anfang Mai 2020 fertiggestellt sein, damit ein Antreten bei dem ersten Termin der Masterprüfung möglich ist.
 
 \section{Organisatorische Details}
+Die Schrift wird in Deutsch gehalten.
+Die fertige Schrift wird auch der 3 Banken IT GmbH zur Durchsicht gegeben. Die 3 Banken IT GmbH entscheidet über die Sperre der Schrift, sofern firmeninterne oder vertrauliche Daten beschrieben werden. Der Autor der Schrift besteht nicht auf die Sperre der Arbeit.
 
 \section{Wichtige Meilensteine}
+Die nachfolgende Tabelle gibt einen Überblick über die wichtigsten Meilensteine der Arbeit.
+\begin{table}[H]
+%	\resizebox{\textwidth/2}{!}{%
+		\begin{tabular}{ll}
+			\hline
+			\multicolumn{1}{|l|}{Datum} & \multicolumn{1}{l|}{Aufgabe} \\ \hline
+			\multicolumn{1}{|l|}{2019-11-15} & \multicolumn{1}{l|}{Abgabe des Inhaltsverzeichnisses} \\ \hline
+			\multicolumn{1}{|l|}{2020-01-10} & \multicolumn{1}{l|}{Abgabe des Probekapitel} \\ \hline
+			\multicolumn{1}{|l|}{2020-05-01} & \multicolumn{1}{l|}{Abgabe des Literaturverzeichnisses} \\ \hline
+			\multicolumn{1}{|l|}{2020-05-08} & \multicolumn{1}{l|}{Abgabe der finalen Schrift} \\ \hline
+			\multicolumn{1}{|l|}{2020-05-30} & \multicolumn{1}{l|}{Übergabe des Prototypen} \\ \hline
+		\end{tabular}%
+%	}
+
+\end{table}
 
 \section{Wichtige Literatur}
-
+Im folgenden wird die wichtigste Literatur der Arbeit dargestellt.
+\begin{enumerate}
+	\item \cite{SpringBoot2}: Spring Boot 2 ist die verwendete Backend-Technologie. Das Buch \citetitle{SpringBoot2} wird benötigt, um diese Technologie zu beschreiben.
+	\item \cite{ProAngular6}: Angular wird als Frontend-Technologie verwendet. \citetitle{ProAngular6} dient zum Beschreiben dieser Technologie.
+	\item \cite{3BankenIT}: Zur Beschreibung des Unternehmens wird die Firmenhomepage verwendet. 
+	\item \cite{FullStackReact}: Auch ein Vergleich des verwendeten Technologiestacks mit Ähnlichen ist Thema der Arbeit. ReactJS ist eine Frontend-Technologie. Das Buch \citetitle{FullStackReact} dient zum Evaluieren der Vor- und Nachteile von ReactJS und dem Vergleich mit Angular.
+	\item \cite{JavaEE}: JavaEE ist eine ähnliche Technologie zu Spring Boot. Das Buch \citetitle{JavaEE} dient ebenfalls zum Vergleich der Vor- und Nachteile.
+\end{enumerate}
 
 %%%----------------------------------------------------------
 \MakeBibliography                     				% references
