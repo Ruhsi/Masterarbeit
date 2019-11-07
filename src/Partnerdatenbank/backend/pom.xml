@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>at.fh.se.master</groupId>
-    <artifactId>backend</artifactId>
+    <artifactId>company-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>backend</name>
-    <description>Master Thesis for 3 Banken IT</description>
+    <name>company-service</name>
+    <description>This is the company service where companies and partners can be retrieved.</description>
 
     <properties>
         <java.version>12</java.version>

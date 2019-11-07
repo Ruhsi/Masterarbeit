@@ -38,23 +38,24 @@ export class AddPartnerComponent implements OnInit {
     this.partner.phoneNumbers = new Array<PhoneNumber>();
 
     this.firstFormGroup = this._formBuilder.group({
-      titleCtrl: this.partner.title,
-      firstNameCtrl: [this.partner.firstname, Validators.required],
-      lastNameCtrl: [this.partner.lastname, Validators.required]
+      titleBeforeCtrl: this.partner.titleBefore,
+      titleAfterCtrl: this.partner.titleAfter,
+      firstNameCtrl: [this.partner.firstname],
+      lastNameCtrl: [this.partner.lastname]
     });
     this.secondFormGroup = this._formBuilder.group({
-      streetCtrl: [this.partner.address.street, Validators.required],
-      streetNumberCtrl: [this.partner.address.streetNumber, Validators.required],
-      postalCodeCtrl: [this.partner.address.postalCode, Validators.required],
-      cityCtrl: [this.partner.address.city, Validators.required],
-      countryCtrl: [this.partner.address.country, Validators.required]
+      streetCtrl: [this.partner.address.street],
+      streetNumberCtrl: [this.partner.address.streetNumber],
+      postalCodeCtrl: [this.partner.address.postalCode],
+      cityCtrl: [this.partner.address.city],
+      countryCtrl: [this.partner.address.country]
     });
     this.thirdFormGroup = this._formBuilder.group({
-      phoneNumberCtrl: ['', Validators.required],
-      privatePhoneCtrl: [true, Validators.required],
+      phoneNumberCtrl: [''],
+      privatePhoneCtrl: [true],
 
-      emailCtrl: ['', Validators.required],
-      privateMailCtrl: [true, Validators.required]
+      emailCtrl: [''],
+      privateMailCtrl: [true]
     });
   }
 
@@ -79,7 +80,7 @@ export class AddPartnerComponent implements OnInit {
   addPartner(): void {
     this.partnerService.addOrUpdatePartner(this.partner)
       .subscribe((partner: Partner) => {
-        this.openSnackbar("Partner erfolgreich hinzugefügt!", "Partner hinzufügen.");
+        this.openSnackbar("Partner erfolgreich hinzugefügt!", "x");
         this.reset();
       })
   }

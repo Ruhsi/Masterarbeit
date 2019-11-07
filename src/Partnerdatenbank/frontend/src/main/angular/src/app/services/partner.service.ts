@@ -24,4 +24,12 @@ export class PartnerService {
         retry(1)
       );
   }
+
+  getAllPartners(){
+    return this.http.get(this.URL + "/partners");
+  }
+
+  deletePartner(partner: Partner){
+    return this.http.delete(this.URL + "/partner/" + partner.id);
+  }
 }

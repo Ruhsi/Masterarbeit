@@ -1,0 +1,76 @@
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button>
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Name</ng-template>
+      <mat-list>
+        <mat-list-item>
+          <mat-form-field>
+            <input matInput placeholder="Name" formControlName="nameCtrl" [(ngModel)]="company.name" required>
+          </mat-form-field>
+        </mat-list-item>
+      </mat-list>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Adresse</ng-template>
+      <mat-list>
+        <mat-list-item>
+          <mat-form-field>
+            <input matInput placeholder="Straße" formControlName="streetCtrl" [(ngModel)]="company.address.street" required>
+          </mat-form-field>
+          <span></span>
+          <mat-form-field>
+            <input matInput placeholder="Hausnummer" formControlName="streetNumberCtrl"
+                   [(ngModel)]="company.address.streetNumber" required>
+          </mat-form-field>
+        </mat-list-item>
+        <mat-divider [vertical]="true"></mat-divider>
+        <mat-list-item>
+          <mat-form-field>
+            <input matInput placeholder="PLZ" formControlName="postalCodeCtrl" [(ngModel)]="company.address.postalCode" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Stadt" formControlName="cityCtrl" [(ngModel)]="company.address.city" required>
+          </mat-form-field>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-form-field>
+            <input matInput placeholder="Land" formControlName="countryCtrl" [(ngModel)]="company.address.country" required>
+          </mat-form-field>
+        </mat-list-item>
+      </mat-list>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Unternehmen</ng-template>
+    <mat-list>
+      <mat-list-item>
+        {{company.name}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        {{company.address.street + " " + company.address.streetNumber}}
+      </mat-list-item>
+      <mat-list-item>
+        {{company.address.postalCode + " " + company.address.city}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+    <div>
+      <button mat-button matStepperPrevious>Zurück</button>
+      <button mat-button (click)="reset()">Reset</button>
+      <button mat-button (click)="addCompany()">Speichern</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

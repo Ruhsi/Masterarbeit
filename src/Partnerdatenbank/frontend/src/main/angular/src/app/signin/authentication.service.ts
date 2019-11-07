@@ -1,70 +1,50 @@
 import {Injectable} from '@angular/core';
-import {BehaviorSubject, Observable} from "rxjs";
-import {AuthService, GoogleLoginProvider, SocialUser} from "angularx-social-login";
-import {Router} from "@angular/router";
+import {HttpClient} from "@angular/common/http";
 import {configuration} from "../../configuration/configuration";
+import {BehaviorSubject} from "rxjs/internal/BehaviorSubject";
+import {Observable} from "rxjs/internal/Observable";
+import {Principal} from "../models/user/Principal";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  private readonly CURRENT_USER: string = 'currentUser';
-  private readonly HOME_PAGE: string = configuration.PAGES.HOME;
-  private readonly LOGIN_PAGE: string = configuration.PAGES.LOGIN;
+  private readonly BASEURL: string = configuration.BASEURL;
 
-  private currentUserSubject: BehaviorSubject<SocialUser>;
-  public currentUser: Observable<SocialUser>;
+  private loggedInUserSubject: BehaviorSubject<Principal>;
+  public loggedInUser: Observable<Principal>;
 
   constructor(
-    private authService: AuthService,
-    private router: Router
+    private http: HttpClient
   ) {
-    this.currentUserSubject = new BehaviorSubject<SocialUser>(JSON.parse(localStorage.getItem(this.CURRENT_USER)));
-    this.currentUser = this.currentUserSubject.asObservable();
-
-    this.authService.authState.subscribe((user) => {
-      if (user != null) {
-        this.login(user);
-      } else {
-        this.logout();
-      }
-    });
+    this.loggedInUserSubject = new BehaviorSubject<Principal>(null);
+    this.loggedInUser = this.loggedInUserSubject.asObservable();
   }
 
-  public get currentUserValue(): SocialUser {
-    return this.currentUserSubject.value;
+  public login(username: string, password: string) {
+    // use formData cause the login of Spring requires the credentials
+    // to be delivered in a formData
+    let formData: FormData = new FormData();
+    formData.append("username", username);
+    formData.append("password", password);
+
+    return this.http.post(this.BASEURL + "/login", formData);
   }
 
-  login(user: SocialUser) {
-    if (user && user.authToken) {
-      // store user details and token in local storage to keep user logged in between page refreshes
-      localStorage.setItem(this.CURRENT_USER, JSON.stringify(user));
-      this.currentUserSubject.next(user);
-    }
-
-    return user;
+  public logout(): Observable<any> {
+    return this.http.post(this.BASEURL + "/logout", null);
   }
 
-  logout() {
-    // remove user from local storage to log user out
-    localStorage.removeItem(this.CURRENT_USER);
-    this.currentUserSubject.next(null);
+  public user() {
+    return this.http.get(this.BASEURL + "/user");
   }
 
-
-
-  signinWithGoogle(): void {
-    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
-      () => this.router.navigate([this.HOME_PAGE])
-    );
+  public setLoggedUser(loggedUser: Principal): void {
+    this.loggedInUserSubject.next(loggedUser);
   }
 
-  signOut(): void {
-    this.authService.signOut().then(
-      () => this.router.navigate([this.LOGIN_PAGE])
-    );
+  public getLoggedUser(): Principal {
+    return this.loggedInUserSubject.value;
   }
-
-
 }

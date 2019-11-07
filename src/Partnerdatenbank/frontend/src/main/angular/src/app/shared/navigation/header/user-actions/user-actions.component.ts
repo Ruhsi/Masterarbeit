@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from "../../../../signin/authentication.service";
-import {SocialUser} from "angularx-social-login";
+import {Principal} from "../../../../models/user/Principal";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-user-actions',
@@ -9,20 +10,23 @@ import {SocialUser} from "angularx-social-login";
 })
 export class UserActionsComponent implements OnInit {
 
-  protected user: SocialUser;
+  protected user: Principal;
 
   constructor(
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private router: Router
   ) { }
 
   ngOnInit() {
-    this.authenticationService.currentUser.subscribe((user: SocialUser) => {
-      this.user = user;
-    });
+    this.user = this.authenticationService.getLoggedUser();
   }
 
   logout() {
-    this.authenticationService.signOut();
+    this.authenticationService.logout()
+      .subscribe(() => {
+        this.authenticationService.setLoggedUser(null);
+        this.router.navigate(["/"]);
+      });
   }
 
 }

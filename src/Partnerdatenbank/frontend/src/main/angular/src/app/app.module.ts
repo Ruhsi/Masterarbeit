@@ -3,34 +3,22 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {AuthServiceConfig, GoogleLoginProvider, LoginOpt, SocialLoginModule} from 'angularx-social-login';
-import {GoogleSigninComponent} from './signin/google-signin/google-signin.component';
-import {HttpClientModule} from "@angular/common/http";
+import {SocialLoginModule} from 'angularx-social-login';
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MainLayoutModule} from "./shared/main-layout/main-layout/main-layout.module";
 import {NavigationModule} from "./shared/navigation/navigation.module";
-import { AddPartnerComponent } from './main-pages/add-partner/add-partner.component';
-
-let config = new AuthServiceConfig([
-  {
-    id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider('259022406161-oi9mt111p3j3ul93dikbf2etfjoo4vjm.apps.googleusercontent.com')
-  },
-]);
-
-export function provideConfig() {
-  return config;
-}
-
-const googleLoginOptions: LoginOpt = {
-  scope: 'profile email'
-};
-
+import {HttpHeaderInterceptor} from "./shared/interceptors/HttpHeaderInterceptor";
+import { LoginComponent } from './signin/login/login.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { PartnerComponent } from './main-pages/partner/partner.component';
+import { AddCompanyComponent } from './main-pages/add-company/add-company.component';
+import { CompanyComponent } from './main-pages/company/company.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GoogleSigninComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +27,9 @@ const googleLoginOptions: LoginOpt = {
     HttpClientModule,
     BrowserAnimationsModule,
     NavigationModule,
-    MainLayoutModule
+    MainLayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     BrowserModule,
@@ -52,10 +42,7 @@ const googleLoginOptions: LoginOpt = {
   ],
   providers: [
     HttpClientModule,
-    {
-      provide: AuthServiceConfig,
-      useFactory: provideConfig
-    },
+    {provide: HTTP_INTERCEPTORS, useClass: HttpHeaderInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

@@ -8,8 +8,17 @@
       <a mat-list-item [routerLink]="[home]">
         <mat-icon matListIcon (click)="sidenav.toggle()">home</mat-icon>Home
       </a>
+      <a mat-list-item [routerLink]="[partner]">
+        <mat-icon matListIcon (click)="sidenav.toggle()">person</mat-icon>Partner anzeigen
+      </a>
       <a mat-list-item [routerLink]="[addpartner]">
         <mat-icon matListIcon (click)="sidenav.toggle()">person_add</mat-icon>Partner hinzufügen
+      </a>
+      <a mat-list-item [routerLink]="[company]">
+        <mat-icon matListIcon (click)="sidenav.toggle()">group</mat-icon>Unternehmen anzeigen
+      </a>
+      <a mat-list-item [routerLink]="[addcompany]">
+        <mat-icon matListIcon (click)="sidenav.toggle()">group_add</mat-icon>Unternehmen hinzufügen
       </a>
     </mat-nav-list>
   </mat-sidenav>

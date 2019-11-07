@@ -1,7 +1,5 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {Router} from "@angular/router";
 import {MatSidenav} from "@angular/material";
-import {MainLayoutService} from "../../main-layout/main-layout/main-layout.service";
 import {configuration} from "../../../../configuration/configuration";
 
 @Component({
@@ -14,14 +12,14 @@ export class SidebarComponent implements OnInit, AfterViewInit {
 
   readonly login: string = configuration.PAGES.LOGIN;
   readonly addpartner: string = configuration.PAGES.ADDPARTNER;
+  readonly partner: string = configuration.PAGES.PARTNER;
+  readonly addcompany: string = configuration.PAGES.ADDCOMPANY;
+  readonly company: string = configuration.PAGES.COMPANY;
   readonly home: string = configuration.PAGES.HOME;
 
   @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
 
-  constructor(
-    private router: Router,
-    private mainLayoutService: MainLayoutService
-  ) {
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -31,7 +29,4 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
   }
 
-  routeTo(location: string): void {
-    this.router.navigate([location]);
-  }
 }
