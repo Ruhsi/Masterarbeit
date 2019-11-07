@@ -1,160 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.html" description="button" line="96" />
+    <bookmark url="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.html" description="button" line="116" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1979edd-3bd5-438d-818d-ccb237e65c6e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/BackendApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/CompanyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/CompanyControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/UserControllerApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/security/configuration/CustomCorsFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/model/Company.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/repository/CompanyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-company/add-company.routing.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/company/company.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/company/company.routing.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/partner/partner.routing.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/models/company/company.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/models/user/Authority.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/models/user/Details.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/models/user/Principal.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/models/user/Role.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/models/user/User.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/interceptors/HttpHeaderInterceptor.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/BackendApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/rest/controller/PartnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/rest/controller/PartnerControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerControllerApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/security/configuration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/security/configuration/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/security/model/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/security/model/CustomUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/security/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/security/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/security/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/security/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/security/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/security/service/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/service/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/model/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/service/model/MailAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/model/MailAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/service/model/Partner.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/model/Partner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/service/model/PhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/model/PhoneNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/service/repository/PartnerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/repository/PartnerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/service/repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/repository/UsersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/at/fh/se/master/backend/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/at/fh/se/master/company/BackendApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerControllerApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/home/home.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/home/home.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/models/partner/Partner.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/models/partner/Partner.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/partner.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/partner.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/guards/google-user-authentication.guard.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/guards/user-authentication.guard.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/guards/google-user-authentication.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/guards/user-authentication.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/navigation/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/navigation/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/navigation/header/user-actions/user-actions.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/navigation/header/user-actions/user-actions.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/navigation/header/user-actions/user-actions.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/navigation/header/user-actions/user-actions.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/navigation/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/navigation/sidebar/sidebar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/navigation/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/navigation/sidebar/sidebar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/signin/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/signin/authentication.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/signin/google-signin/google-signin.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/signin/google-signin/google-signin.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/signin/google-signin/google-signin.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/signin/google-signin/google-signin.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/configuration/configuration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/configuration/configuration.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springandangular_projekt/frontend/src/main/angular/frontend-gui" beforeDir="false" afterPath="$PROJECT_DIR$/../springandangular_projekt/frontend/src/main/angular/frontend-gui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/Ruhsam Christoph MA 2014_07_02 Expose v.1.0..pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/Ruhsam Christoph MA 2014_07_02 Expose v.1.0..tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/back/appendix_a.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/back/appendix_b.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/back/appendix_c.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/back/appendix_d.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/back/printbox.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/chapters/1_introduction.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/chapters/2_infrastructure-as-code.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/chapters/3_containerization-with-docker.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/chapters/4_container-as-a-service-kubernetes.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/chapters/5_platform-as-a-service-openshift.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/chapters/6_enterprise-service-bus.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/chapters/7_esb_openshift_design.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/chapters/8_esb_openshift_impl.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/chapters/9_esb_openshift_eval.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/chapters/backup_maybe_usable.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/front/abstract.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/front/kurzfassung.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/front/preface.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/hgb.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/hgbabbrev.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/hgbarticle.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/hgbbib.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/hgbheadings.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/hgblistings.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/hgbmath.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/hgbreport.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/hgbthesis.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/automation-fear-spiral.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/docker-architecture.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/docker-containerized-architecture.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/docker-engine.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/docker-virtualization-architecture.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esb-bidirectional-integration.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esb-cloud-architecture.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esb-integration-example.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esb-sca-example.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esb-simple-architecture.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esb-software-architecture.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esbd-multi-stage-env.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esbd-service-adapter.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esbd-service-mediation.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esbd-service-multiple-versions.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esbd-service-security.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esboc-design-microservice.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esboc-design-openshift.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/esboc-requirement-services.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/kubernetes-cluster-architecture.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/logo.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/openshift-kubernetes-cluster-architecture.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/openshift-project-architecture.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/images/reproduce-infrastructure.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/main.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/references.bib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/bash-oc-secret.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/bash-oc-service.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/bash-oc-template.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/deployment-config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/deployment-container.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/deployment-volume-secret-container.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/deployment-volume-secret.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/deployment.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/iac-docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/java-config-inject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/java-fault-tolerance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/java-logging-producer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/java-logging-tracing-id.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/java-logging.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/java-swagger-client-builder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/java-swagger-client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/java-swagger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/java-tracing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/maven-keycloak-swarm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/maven-microprofile-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/maven-microprofile-fault-tolerance.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/maven-microprofile-opentracing.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/maven-swagger-client-add-sources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/maven-swagger-client-clean.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/maven-swagger-client-swagger-plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/maven-swagger-service.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/maven-swarm-logging.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/paluch-module.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/project-stages-logging-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/project-stages-logging-format.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/project-stages-logging-prod.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/project-stages-micro-config-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/project-stages-micro-config-prod.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/project-stages-opentracing.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/project-stages-security.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/sources/project-stages-swagger.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/title.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/expose/title.pdf" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/backend/target/" />
@@ -198,23 +54,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="company.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/company/company.component.html">
+      <file leaf-file-name="add-partner.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="170">
+              <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
               <folding>
-                <element signature="n#style#0;n#p#1;n#div#0;n#mat-expansion-panel#0;n#mat-accordion#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#mat-form-field#0;n#mat-list-item#4;n#mat-list#0;n#form#0;n#mat-step#0;n#mat-horizontal-stepper#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Partner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/model/Partner.java">
+      <file leaf-file-name="add-partner.component.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+            <state relative-caret-position="17">
+              <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -228,19 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/repository/CompanyRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="64" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Company.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/model/Company.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
+            <state relative-caret-position="672">
               <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -249,25 +96,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="company.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/models/company/company.ts">
+      <file leaf-file-name="PartnerControllerApi.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerControllerApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="270">
+              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="company.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/company/company.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -291,11 +126,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add-company.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PartnerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+              <folding>
+                <element signature="e#761#762#0" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
+                <element signature="e#1007#1008#0" expanded="true" />
+                <element signature="e#1034#1035#0" expanded="true" />
+                <element signature="e#1521#1530#0" expanded="true" />
+                <element signature="e#2330#2331#0" expanded="true" />
+                <element signature="e#2357#2358#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-partner.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="774">
+              <caret line="80" column="12" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-company.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-company/add-company.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+            <state relative-caret-position="153">
+              <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -321,11 +186,15 @@
       <find>stepper</find>
       <find>PartnerRepository</find>
       <find>withCre</find>
-      <find>Partner hin</find>
+      <find />
       <find>placehol</find>
       <find>partner</find>
       <find>compan</find>
       <find>partnerRepository</find>
+      <find>lastNameCt</find>
+      <find>State</find>
+      <find>state</find>
+      <find>selectedCom</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -334,9 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/security/configuration/dsfds.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/security/configuration/WebMvcApplicationContext.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/security/configuration/CustomCorsFilter.java" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/signin/login/login.component.ts" />
         <option value="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/rest/controller/UserControllerApi.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/rest/controller/UserController.java" />
@@ -362,7 +228,6 @@
         <option value="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/rest/controller/CompanyController.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/service/model/Partner.java" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/models/partner/Partner.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/configuration/configuration.ts" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/company/partner.module.ts" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/company/partner.routing.ts" />
@@ -376,7 +241,6 @@
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/company.service.ts" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-company/add-company.component.html" />
-        <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/partner/gridlist/gridlist.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/company/company.component.ts" />
         <option value="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/backend/service/model/Company.java" />
@@ -385,6 +249,11 @@
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/company/company.component.html" />
         <option value="$PROJECT_DIR$/backend/pom.xml" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-company/add-company.component.ts" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerControllerApi.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerController.java" />
+        <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.html" />
       </list>
     </option>
   </component>
@@ -879,12 +748,12 @@
       <workItem from="1570782936905" duration="26921000" />
       <workItem from="1571910394937" duration="581000" />
       <workItem from="1572522457313" duration="612000" />
-      <workItem from="1572684885223" duration="14151000" />
+      <workItem from="1572684885223" duration="21497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148263000" />
+    <option name="totallyTimeSpent" value="155609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -904,7 +773,7 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4974293" weight="0.34417343" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.3292683" />
-      <window_info anchor="right" id="Codota" order="10" />
+      <window_info anchor="right" id="Codota" order="10" weight="0.32969153" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
@@ -912,7 +781,7 @@
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49550128" weight="0.30487806" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3292683" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.5655527" visible="true" weight="0.28184283" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.5655527" visible="true" weight="0.26693767" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.67474747" visible="true" weight="0.2281491" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32969153" />
       <window_info id="Web" order="6" side_tool="true" />
@@ -1018,16 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerControllerApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/security/configuration/SecurityConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -1066,21 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
-            <element signature="e#1007#1008#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1299#1300#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1192,16 +1036,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="103" column="3" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="103" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-company/add-company.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1216,16 +1050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="44" column="97" selection-start-line="44" selection-start-column="97" selection-end-line="44" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1294,16 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/model/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/BackendApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-476">
@@ -1320,10 +1134,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-company/add-company.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+        <state relative-caret-position="153">
+          <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/service/model/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerControllerApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding>
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1521#1530#0" expanded="true" />
+            <element signature="e#2330#2331#0" expanded="true" />
+            <element signature="e#2357#2358#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="80" column="12" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="10" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="37" column="60" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#mat-form-field#0;n#mat-list-item#4;n#mat-list#0;n#form#0;n#mat-step#0;n#mat-horizontal-stepper#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

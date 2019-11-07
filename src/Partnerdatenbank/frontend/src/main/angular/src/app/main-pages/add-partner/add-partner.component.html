@@ -8,31 +8,47 @@
       <mat-list>
         <mat-list-item>
           <mat-form-field>
-            <input matInput placeholder="Titel vorher" formControlName="titleBeforeCtrl" [(ngModel)]="partner.titleBefore">
+            <input matInput placeholder="Titel vorher" formControlName="titleBeforeCtrl"
+                   [(ngModel)]="partner.titleBefore">
           </mat-form-field>
         </mat-list-item>
         <mat-list-item>
           <mat-form-field>
-            <input matInput placeholder="Titel nachher" formControlName="titleAfterCtrl" [(ngModel)]="partner.titleAfter">
+            <input matInput placeholder="Titel nachher" formControlName="titleAfterCtrl"
+                   [(ngModel)]="partner.titleAfter">
           </mat-form-field>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
           <mat-form-field>
-            <input matInput placeholder="Vorname" formControlName="firstNameCtrl" [(ngModel)]="partner.firstname" required>
+            <input matInput placeholder="Vorname" formControlName="firstNameCtrl" [(ngModel)]="partner.firstname"
+                   required>
           </mat-form-field>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item>
           <mat-form-field>
-            <input matInput placeholder="Nachname" formControlName="lastNameCtrl" [(ngModel)]="partner.lastname" required>
+            <input matInput placeholder="Nachname" formControlName="lastNameCtrl" [(ngModel)]="partner.lastname"
+                   required>
           </mat-form-field>
         </mat-list-item>
-      </mat-list>
+        <mat-list-item>
+          <mat-form-field style="width: 70%;">
+            <input matInput placeholder="Unternehmen" [matAutocomplete]="auto" formControlName="companyCtrl"
+                   [(ngModel)]="selectedCompany.creditorName">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let company of filteredCompanies | async" [value]="company.creditorName">
+                <span>{{company.creditorName}}</span> |
+                <small>Nummer: {{company.creditorNumber}}</small>
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
 
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
+        </mat-list-item>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-list>
     </form>
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
@@ -41,7 +57,8 @@
       <mat-list>
         <mat-list-item>
           <mat-form-field>
-            <input matInput placeholder="Straße" formControlName="streetCtrl" [(ngModel)]="partner.address.street" required>
+            <input matInput placeholder="Straße" formControlName="streetCtrl" [(ngModel)]="partner.address.street"
+                   required>
           </mat-form-field>
           <span></span>
           <mat-form-field>
@@ -52,7 +69,8 @@
         <mat-divider [vertical]="true"></mat-divider>
         <mat-list-item>
           <mat-form-field>
-            <input matInput placeholder="PLZ" formControlName="postalCodeCtrl" [(ngModel)]="partner.address.postalCode" required>
+            <input matInput placeholder="PLZ" formControlName="postalCodeCtrl" [(ngModel)]="partner.address.postalCode"
+                   required>
           </mat-form-field>
           <mat-form-field>
             <input matInput placeholder="Stadt" formControlName="cityCtrl" [(ngModel)]="partner.address.city" required>
@@ -60,7 +78,8 @@
         </mat-list-item>
         <mat-list-item>
           <mat-form-field>
-            <input matInput placeholder="Land" formControlName="countryCtrl" [(ngModel)]="partner.address.country" required>
+            <input matInput placeholder="Land" formControlName="countryCtrl" [(ngModel)]="partner.address.country"
+                   required>
           </mat-form-field>
         </mat-list-item>
       </mat-list>
@@ -76,7 +95,8 @@
       <mat-list>
         <mat-list-item>
           <mat-form-field>
-            <input type="text" matInput placeholder="Telefonnummer" formControlName="phoneNumberCtrl" (keydown.enter)="addPhoneNumber()">
+            <input type="text" matInput placeholder="Telefonnummer" formControlName="phoneNumberCtrl"
+                   (keydown.enter)="addPhoneNumber()">
           </mat-form-field>
           <label><input type="radio" name="privatePhoneCtrl" class="with-gap" formControlName="privatePhoneCtrl"
                         [value]="true">&nbsp;
@@ -113,7 +133,8 @@
         <mat-divider></mat-divider>
         <mat-list-item>
           <mat-form-field>
-            <input type="text" matInput placeholder="Email" formControlName="emailCtrl"  (keydown.enter)="addMailAddress()">
+            <input type="text" matInput placeholder="Email" formControlName="emailCtrl"
+                   (keydown.enter)="addMailAddress()">
           </mat-form-field>
           <label><input type="radio" name="privateMailCtrl" class="with-gap" formControlName="privateMailCtrl"
                         [value]="true">&nbsp;

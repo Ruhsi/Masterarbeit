@@ -1,11 +1,16 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {Partner} from "../../models/partner/Partner";
 import {Address} from "../../models/partner/Address";
 import {MailAddress} from "../../models/partner/MailAddress";
 import {PhoneNumber} from "../../models/partner/PhoneNumber";
 import {MatHorizontalStepper, MatSnackBar, MatSnackBarConfig} from "@angular/material";
 import {PartnerService} from "../../services/partner.service";
+import {Observable} from "rxjs/internal/Observable";
+import {map, startWith} from "rxjs/operators";
+import {CompanyService} from 'src/app/services/company.service';
+import {Company} from 'src/app/models/company/company';
+
 
 @Component({
   selector: 'app-add-partner',
@@ -17,6 +22,9 @@ export class AddPartnerComponent implements OnInit {
   durationInSeconds: number = 5;
 
   partner: Partner;
+  filteredCompanies: Observable<Company[]>;
+  companies: Array<Company>;
+  selectedCompany: Company;
 
   isLinear = true;
   firstFormGroup: FormGroup;
@@ -28,10 +36,14 @@ export class AddPartnerComponent implements OnInit {
   constructor(
     private _formBuilder: FormBuilder,
     private partnerService: PartnerService,
+    private companyService: CompanyService,
     private snackBar: MatSnackBar) {
+
+
   }
 
   ngOnInit() {
+    this.selectedCompany = new Company();
     this.partner = new Partner();
     this.partner.address = new Address();
     this.partner.mailadresses = new Array<MailAddress>();
@@ -41,7 +53,8 @@ export class AddPartnerComponent implements OnInit {
       titleBeforeCtrl: this.partner.titleBefore,
       titleAfterCtrl: this.partner.titleAfter,
       firstNameCtrl: [this.partner.firstname],
-      lastNameCtrl: [this.partner.lastname]
+      lastNameCtrl: [this.partner.lastname],
+      companyCtrl: [this.selectedCompany.creditorName]
     });
     this.secondFormGroup = this._formBuilder.group({
       streetCtrl: [this.partner.address.street],
@@ -57,13 +70,25 @@ export class AddPartnerComponent implements OnInit {
       emailCtrl: [''],
       privateMailCtrl: [true]
     });
+
+    this.companyService.getAllCompanies()
+      .subscribe((companies: Array<Company>) => {
+        this.companies = companies;
+        this.filteredCompanies = this.firstFormGroup.get('companyCtrl').valueChanges
+          .pipe(
+            startWith(''),
+            map(c => c ? this._filterCompanies(c) : this.companies.slice())
+          );
+      });
+
+
   }
 
   addPhoneNumber(): void {
     let phoneNumber: PhoneNumber = new PhoneNumber();
     phoneNumber.isPrivate = this.thirdFormGroup.get('privatePhoneCtrl').value;
     phoneNumber.phoneNumber = this.thirdFormGroup.get('phoneNumberCtrl').value;
-    if(this.partner.phoneNumbers.filter(number => number.phoneNumber == phoneNumber.phoneNumber).length == 0){
+    if (this.partner.phoneNumbers.filter(number => number.phoneNumber == phoneNumber.phoneNumber).length == 0) {
       this.partner.phoneNumbers.push(phoneNumber);
     }
   }
@@ -72,7 +97,7 @@ export class AddPartnerComponent implements OnInit {
     let email: MailAddress = new MailAddress();
     email.isPrivate = this.thirdFormGroup.get('privateMailCtrl').value;
     email.mailAddress = this.thirdFormGroup.get('emailCtrl').value;
-    if(this.partner.mailadresses.filter(mail => mail.mailAddress == email.mailAddress).length == 0) {
+    if (this.partner.mailadresses.filter(mail => mail.mailAddress == email.mailAddress).length == 0) {
       this.partner.mailadresses.push(email);
     }
   }
@@ -99,8 +124,14 @@ export class AddPartnerComponent implements OnInit {
     this.partner.phoneNumbers.splice(i, 1);
   }
 
-  removeMailaddress(i: number){
+  removeMailaddress(i: number) {
     this.partner.mailadresses.splice(i, 1);
+  }
+
+  private _filterCompanies(value: string): Company[] {
+    const filterValue = value.toLowerCase();
+
+    return this.companies.filter(c => c.creditorName.toLowerCase().indexOf(filterValue) === 0);
   }
 
 }

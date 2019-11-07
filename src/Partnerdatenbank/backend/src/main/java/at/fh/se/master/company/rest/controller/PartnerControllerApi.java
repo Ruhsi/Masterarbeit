@@ -1,5 +1,6 @@
 package at.fh.se.master.company.rest.controller;
 
+import at.fh.se.master.company.service.model.Company;
 import at.fh.se.master.company.service.model.Partner;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +27,7 @@ public interface PartnerControllerApi {
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    ResponseEntity<Partner> addPartner(@RequestBody Partner partner);
+    ResponseEntity<Company> addPartner(@RequestParam("companyId") Long companyId, @RequestBody Partner partner);
 
     @RequestMapping(value = "partner/{id}", method = RequestMethod.OPTIONS)
     String deletePartnerPreflight(@PathVariable Long id);
