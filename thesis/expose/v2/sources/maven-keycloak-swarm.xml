@@ -1,0 +1,4 @@
+<dependency>
+    <groupId>io.thorntail</groupId>
+    <artifactId>keycloak</artifactId>
+</dependency>

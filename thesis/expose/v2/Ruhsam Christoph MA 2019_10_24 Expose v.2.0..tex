@@ -1,0 +1,238 @@
+%%% File encoding: UTF-8
+%% äöüÄÖÜß  <-- no German Umlauts here? Use an UTF-8 compatible editor!
+
+%%% Magic comments for setting the correct parameters in compatible IDEs
+% !TeX encoding = utf8
+% !TeX program = pdflatex 
+% !TeX spellcheck = de_DE
+% !BIB program = biber
+
+\documentclass[master,german]{hgbthesis}
+% Permissible options in [..]: 
+%   Type of work: diploma, master (default), bachelor, internship 
+%   Main language: german, english (default)
+%%%----------------------------------------------------------
+
+\RequirePackage[utf8]{inputenc}		% Remove when using lualatex or xelatex entfernen!
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{minted}
+\usepackage{listings}
+\usepackage{varioref}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{url}
+\geometry{top=2.5cm,left=2.5cm,bottom=2.5cm,right=2.5cm}
+\renewcommand{\thesection}{\arabic{section}}
+% -----------------------------------------------------
+\newenvironment{code}{\captionsetup{type=listing}}{}
+% -----------------------------------------------------
+% -----------------------------------------------------
+\newcommand{\mysubsubsection}[1]{{\subsubsection{\textbf{#1}}}}
+\newcommand{\mentionedtext}[1]{{\textit{{#1}}}}
+\newcommand{\sourceDir}{./sources}
+\newcommand{\sourceFontSize}{\fontsize{10pt}{11.5}}
+\newcommand{\quotes}[1]{``#1''}
+\newmintedfile[bashFile]{bash}{
+	linenos=false, 
+	frame=none, 
+	breaklines=true, 
+	tabsize=2,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	baselinestretch=1,
+	fontsize=\sourceFontSize
+}
+\newmintedfile[yamlFile]{yaml}{
+	linenos=false, 
+	frame=none, 
+	breaklines=true, 
+	tabsize=2,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	baselinestretch=1,
+	fontsize=\sourceFontSize
+}
+\newmintedfile[javaFile]{java}{
+	linenos=false, 
+	frame=none, 
+	breaklines=true, 
+	tabsize=2,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	baselinestretch=1,
+	fontsize=\sourceFontSize
+}
+\newmintedfile[xmlFile]{xml}{
+	breaklines=true, 
+	tabsize=2,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	baselinestretch=1,
+	autogobble=true,
+	breakautoindent=false,
+	fontsize=\sourceFontSize
+}
+\newmintinline[inlineJava]{java}{
+	fontsize=\sourceFontSize
+}
+\newmintinline[inlineBash]{bash}{
+	fontsize=\sourceFontSize
+}
+% -----------------------------------------------------
+\graphicspath{{images/}}    % location of images and graphics
+\logofile{logo}				% logo file = images/logo.pdf (use \logofile{} for no logo)
+\bibliography{references.bib}  	% name of bibliography file (references.bib)
+\setlength{\parindent}{0pt}
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries}{\thesection}{1em}{}
+
+\renewcommand*{\labelalphaothers}{}
+\DeclareLabelalphaTemplate{
+	\labelelement{
+		\field[final]{shorthand}
+		\field{labelname}
+		\field{label}
+	}
+	\labelelement{
+		\literal{,\addhighpenspace}
+	}
+	\labelelement{
+		\field{year}
+	}
+}
+%%%----------------------------------------------------------
+% Title page entries
+%%%----------------------------------------------------------
+
+%%% Entries for ALL types of work: --------------------------
+\title{Implementierung einer Partnerdatenbank und Evaluierung des verwendeten Technologiestack} %no camel used (and Camel)
+%\author{Ing. Thomas Herzog B.Sc}
+%\programname{Software Engineering}
+\placeofstudy{Hagenberg}
+\dateofsubmission{2020}{05}{30}	% {YYYY}{MM}{DD}
+
+%%% Entries for Bachelor theses only: -----------------------
+%\thesisnumber{XXXXXXXXXX-A}   %e.g. 1310238045-A  
+% (Stud-ID, A = 1st Bachelor thesis)
+%\semester{Fall Semester 2017} 	% Fall/Spring Semester YYYY
+%\coursetitle{Introduction to Trivial Problems 1} 
+\advisor{FH-Prof. DI Dr. Herwig Mayr}
+
+%%% Restricted publication license instead of CC (master only):
+%\cclicense
+
+%%%----------------------------------------------------------
+\begin{document}
+%%%----------------------------------------------------------
+
+%%%----------------------------------------------------------
+\frontmatter							% title part (roman page numbers)
+%%%----------------------------------------------------------
+
+\includepdf{title.pdf}
+%\maketitle
+%\tableofcontents
+
+%\include{front/preface} 	% preface is optional
+%\include{front/abstract}
+
+%%%----------------------------------------------------------
+\mainmatter          			% main part (arabic page numbers)
+%%%----------------------------------------------------------
+
+\section{Titel der Arbeit}
+Die \textit{3 Banken IT GmbH} möchte zur Verwaltung ihrer Parnter ein einheitliches System. Derzeit sind Partner in verschiedenen Systemen (z.B. SAP, Excel-Liste, Word-Dokument) hinterlegt. Es soll eine Partnerdatenbank implementiert werden, die das Verwalten der Partner vereinfacht.
+Zudem soll für jeden Geschäftsfall ein eigenes Microservice angelegt und gezeigt werden, wie dieses in OpenShift deployt werden kann. Auch zusätzlich erforderliche Funktionalitäten, wie Swagger, Jaeger oder Jenkins-Pipelines werden in der Arbeit behandelt.
+Der Titel der Arbeit lautet daher: \glqq \textbf{Architektur einer Microservice-Anwendung und Deployment in OpenShift am Beispiel einer Partnerdatenbank}\grqq.
+
+{\section{Ziel und Motivation}}
+Ziel dieser Arbeit ist die Erleichterung der Partnerverwaltung für die 3 Banken IT GmbH sowie die Erlangung von Wissen und Erfahrung des Autors in den Bereichen Microservices und OpenShift. Zudem soll auch gezeigt werden, wie eine Microservicearchitektur inklusive REST-Schnittstellenbeschreibung, Tracing und Automatisierte Builds und Deployments entwickelt werden kann. Abschließend sollen die Microservices in OpenShift deployt werden.
+
+Dies ist zugleich die Motivation der Arbeit. Der Autor soll ein breit gefächertes Wissen in diesen Bereichen erlangen und in zukünftigen Projekten selbst entscheiden können, ob eine Microservice-Architektur Sinn macht.
+
+
+
+\section{Unternehmen}
+Die 3 Banken IT GmbH ist der IT-Dienstleister der 3-Banken-Gruppe. Zur 3-Banken-Gruppe gehören die drei Regionalbanken \textit{Oberbank AG}, \textit{Bank für Tirol und Vorarlberg AG} und die \textit{BKS Bank AG}.
+Die Geschäftsführer der 3 Banken IT GmbH sind Karl Stöbich, MBA und Mag. Alexander Wiesinger, MBA. Der Standort ist in Linz.
+Das Dienstleistungsspektrum der 3 Banken IT GmbH umfasst:
+\begin{enumerate}
+	\item Applikationsentwicklung/Banken-Lösungen,
+	\item IT-Security,
+	\item Rechenzentrums- und IT-Infrastruktur-Dienstleistungen und
+	\item Outputservice \& Zahlungsverkehr-Abwicklung
+\end{enumerate} 
+
+In der Zentrale Linz und in den beiden Kompetenzzentren Klagenfurt und Innsbruck sind derzeit 254 Mitarbeiter beschäftigt.
+\cite{3BankenIT}
+
+\section{Konkrete Aufgabenstellung}
+Die konkrete Aufgabenstellung ist die Erstellung der Architektur einer Microservice-Anwendung sowie das Deployment der Microservices in OpenShift am Beispiel einer Partnerdatenbank. Die Partnerdatenbank dient zur erleichterten Verwaltung der Partner der 3 Banken IT GmbH. Zu den Partnern der 3 Banken IT GmbH zählen neben den drei der genannten Banken unter anderem die \textit{FH Oberösterreich}, die \textit{Studiengesellschaft für Zusammenarbeit im Zahlungsverkehr GmbH} und die \textit{Christian Doppler Forschungsgesellschaft}.
+Derzeit werden die Partner in unterschiedlichen Systemen gehalten und verwaltet. Dazu zählen SAP, eine Excel-Liste und unterschiedliche Kontaktdaten, die von den Mitarbeitern selbst gehalten werden.
+
+Die Technologien für die Applikation werden von der 3 Banken IT GmbH festgelegt und sind
+\begin{enumerate}
+	\item eine Microsoft SQL Datenbank,
+	\item Spring Boot als Backend,
+	\item Angular als Frontend und
+	\item OpenShift zur Containerisierung der Microservices.
+\end{enumerate}
+
+Dazu soll mindestens der Erstkontakt, also die Aufnahme der Kontaktdaten des Partners, die grafische Darstellung der jeweiligen Partner, sowie die Kündigung und Löschung der Daten implementiert werden.
+
+\section{Vorgehensweise}
+Zuerst recherchiert der Autor wie Microservice-Architekturen mit Spring Boot erstellt werden können und welche Variante in Frage kommt.
+Es werden drei Microservices implementiert, die zusammenarbeiten und sich auch gegenseitig aufrufen.
+Danach wird das Deployment in \mbox{OpenShift} gezeigt.
+Auch das Frontend soll als eigenes Microservice implementiert und in OpenShift deployt werden. 
+Die Applikation selbst soll bis Ende Mai fertiggestellt und der 3 Banken IT GmbH übergeben werden.
+
+Zur Erstellung der Schrift wird zu Beginn ein Inhaltsverzeichnis inklusive Schätzungen der \mbox{Seitenzahlen} abgegeben. Danach wird mit dem Betreuer ein Probekapitel ausgemacht, das fertiggestellt wird und dem Betreuer zur Durchsicht abgegeben wird. Dies dient als Orientierung zum Verfassen der finalen Schrift. Die finale Schrift soll bist spätestens Anfang Mai 2020 fertiggestellt sein, damit ein Antreten beim ersten Termin der Masterprüfung möglich ist.
+
+\section{Organisatorische Details}
+Die Schrift wird in Deutsch gehalten.
+Die fertige Schrift wird auch der 3 Banken IT GmbH zur Durchsicht gegeben. Die 3 Banken IT GmbH besteht auf die Sperre der Schrift.
+
+\section{Wichtige Meilensteine}
+Die nachfolgende Tabelle gibt einen Überblick über die wichtigsten Meilensteine der Arbeit.
+\begin{table}[H]
+%	\resizebox{\textwidth/2}{!}{%
+		\begin{tabular}{ll}
+			\hline
+			\multicolumn{1}{|l|}{Datum} & \multicolumn{1}{l|}{Aufgabe} \\ \hline
+			\multicolumn{1}{|l|}{2019-11-15} & \multicolumn{1}{l|}{Abgabe des Inhaltsverzeichnisses} \\ \hline
+			\multicolumn{1}{|l|}{2020-01-10} & \multicolumn{1}{l|}{Abgabe des Probekapitel} \\ \hline
+			\multicolumn{1}{|l|}{2020-05-01} & \multicolumn{1}{l|}{Abgabe des Literaturverzeichnisses} \\ \hline
+			\multicolumn{1}{|l|}{2020-05-08} & \multicolumn{1}{l|}{Abgabe der Erstversion der Schrift} \\ \hline
+			\multicolumn{1}{|l|}{2020-05-30} & \multicolumn{1}{l|}{Übergabe des Prototypen} \\ \hline
+			\multicolumn{1}{|l|}{2020-06-30} & \multicolumn{1}{l|}{Abgabe der finalen Schrift} \\ \hline
+		\end{tabular}%
+%	}
+
+\end{table}
+
+\section{Wichtige Literatur}
+Im Folgenden wird die wichtigste Literatur der Arbeit dargestellt.
+\begin{enumerate}
+	\item \cite{SpringBoot2}: Spring Boot 2 ist die verwendete Backend-Technologie. Das Buch \citetitle{SpringBoot2} wird benötigt, um diese Technologie zu beschreiben.
+	\item \cite{ProAngular6}: Angular wird als Frontend-Technologie verwendet. \citetitle{ProAngular6} dient zum Beschreiben dieser Technologie.
+	\item \cite{3BankenIT}: Zur Beschreibung des Unternehmens wird die Firmenhomepage verwendet. 
+	\item \cite{Newman2015}: Dieses Buch wird zur Architektur der Microservices verwendet.
+	\item \cite{Morris2017}: Dieses Buch beschreibt, wie Infrastruktur-Parameter am besten im Code eingebettet werden.
+	\item \cite{DockerDoc}: Docker dient zur Containerisierung der Microservices.
+	\item \cite{OpenshiftDoc}: In OpenShift werden die Microservices deployt und laufen auf dieser Plattform.  
+\end{enumerate}
+
+%%%----------------------------------------------------------
+\MakeBibliography                    				% references
+%%%----------------------------------------------------------
+%%% special page for checking print size --------------------
+%\include{back/printbox}
+
+%%%----------------------------------------------------------
+\end{document}
+%%%----------------------------------------------------------
