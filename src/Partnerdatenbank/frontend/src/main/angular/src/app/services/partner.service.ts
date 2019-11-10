@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {Partner} from "../models/partner/Partner";
 import {configuration} from "../../configuration/configuration";
 import {retry} from "rxjs/operators";
@@ -16,20 +16,23 @@ export class PartnerService {
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) {
+  }
 
-  addOrUpdatePartner(partner: Partner): Observable<Partner> {
-    return this.http.post<Partner>(this.URL + "/partner", JSON.stringify(partner, partner.constructor.prototype), {headers: this.headers})
+  addOrUpdatePartner(id: number, partner: Partner): Observable<Partner> {
+    return this.http.post<Partner>(this.URL + "/docsis/" + id + "/partner",
+      JSON.stringify(partner, partner.constructor.prototype),
+      {headers: this.headers})
       .pipe(
         retry(1)
       );
   }
 
-  getAllPartners(){
+  getAllPartners() {
     return this.http.get(this.URL + "/partners");
   }
 
-  deletePartner(partner: Partner){
+  deletePartner(partner: Partner) {
     return this.http.delete(this.URL + "/partner/" + partner.id);
   }
 }

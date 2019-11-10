@@ -1,0 +1,38 @@
+package at.fh.se.master.docsis.rest.controller;
+
+import at.fh.se.master.docsis.service.model.Link;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RequestMapping("/")
+public interface LinkControllerApi {
+
+
+    @RequestMapping(value = "links/partner/{id}", method = RequestMethod.OPTIONS)
+    String getAllLinksOfPartnerPreflight(@PathVariable("id") Long partnerId);
+
+    @GetMapping(value = "links/partner/{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    ResponseEntity<List<Link>> getAllLinksOfPartner(@PathVariable("id") Long partnerId);
+
+    @RequestMapping(value = "link", method = RequestMethod.OPTIONS)
+    String addLinkPreflight();
+
+    @PostMapping(value = "link",
+            produces = MediaType.APPLICATION_JSON_VALUE,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    ResponseEntity addLink(@RequestBody Link link);
+
+    @RequestMapping(value = "link/{id}", method = RequestMethod.OPTIONS)
+    String deleteLinkPreflight(@PathVariable Long id);
+
+    @DeleteMapping(value = "link/{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity deleteLink(@PathVariable Long id);
+}

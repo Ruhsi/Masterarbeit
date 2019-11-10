@@ -54,7 +54,8 @@ export class AddPartnerComponent implements OnInit {
       titleAfterCtrl: this.partner.titleAfter,
       firstNameCtrl: [this.partner.firstname],
       lastNameCtrl: [this.partner.lastname],
-      companyCtrl: [this.selectedCompany.creditorName]
+      companyCtrl: [],
+      topicCtrl: [this.partner.topic]
     });
     this.secondFormGroup = this._formBuilder.group({
       streetCtrl: [this.partner.address.street],
@@ -103,7 +104,7 @@ export class AddPartnerComponent implements OnInit {
   }
 
   addPartner(): void {
-    this.partnerService.addOrUpdatePartner(this.partner)
+    this.partnerService.addOrUpdatePartner(this.selectedCompany.id, this.partner)
       .subscribe((partner: Partner) => {
         this.openSnackbar("Partner erfolgreich hinzugefügt!", "x");
         this.reset();
@@ -131,7 +132,11 @@ export class AddPartnerComponent implements OnInit {
   private _filterCompanies(value: string): Company[] {
     const filterValue = value.toLowerCase();
 
-    return this.companies.filter(c => c.creditorName.toLowerCase().indexOf(filterValue) === 0);
+    return this.companies.filter(c => c.creditorName.toLowerCase().includes(filterValue));
+  }
+
+  setSelectedCompany(company: string){
+    this.selectedCompany = this.companies.filter(c => c.creditorName == company)[0];
   }
 
 }
