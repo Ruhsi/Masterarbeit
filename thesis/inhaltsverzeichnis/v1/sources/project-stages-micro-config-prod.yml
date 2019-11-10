@@ -1,0 +1,8 @@
+project:
+  stage: "prod"
+swarm:
+  microprofile:
+    config:
+      config-sources:
+        app.secrets:
+          dir: "${oc.secret-service-app.dir}"

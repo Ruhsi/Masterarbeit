@@ -1,0 +1,12 @@
+project:
+  stage: "dev"
+swarm:
+  microprofile:
+    config:
+      config-sources:
+        app.secrets:
+          properties:
+            service.db.base-url: "http://localhost:8080/rest-api"
+            keycloak.token-url: "http://localhost:9080/auth/token"
+            keycloak.client.id: "client"
+            keycloak.client.secret: "client-secret"

@@ -1,0 +1,16 @@
+
+\begin{listing}
+	\yamlFile{\sourceDir/deployment-config.yml}
+	\caption{Configuration of the deployment behavior}
+	\label{ls:esboi-security-oc-deployment-cfg}
+\end{listing}
+\ \\
+Listing \vref{ls:esboi-security-oc-deployment-cfg} shows the configuration of the service deployment behavior and the intended replica count. The deployment behavior is specified as rolling, has the effect that the cluster waits until the new version is healthy before undeploying the old version. This behavior ensures zero downtime of the service during an update, which is possible because the service are stateless.
+
+\begin{listing}
+	\yamlFile{\sourceDir/deployment-container.yml}
+	\caption{Configuration of the deployed service container}
+	\label{ls:esboi-security-oc-deployment-container}
+\end{listing}
+\ \\
+Listing \vref{ls:esboi-security-oc-deployment-container} show the configuration of the container name, ports, volume mounts and environment variables. The container name is the name of the service Maven Artifact, represented by a Maven Property which gets replaced during the build process. The service defines two ports, whereby the port 8080 is used for public client access and port 9990 is used for management console access. The volume mount uses the volume of Listing \vref{ls:esboi-security-oc-deployment-volume-secret}, which has the secrets injected.
