@@ -5,7 +5,6 @@ import {HomePagesModule} from "./main-pages/home/home.module";
 import {UserAuthenticationGuard} from "./shared/guards/user-authentication.guard";
 import {AddPartnerPagesModule} from "./main-pages/add-partner/add-partner.module";
 import {LoginComponent} from "./signin/login/login.component";
-import {PartnerModule} from "./main-pages/partner/partner.module";
 import {AddCompanyModule} from './main-pages/add-company/add-company.module';
 import {CompanyModule} from './main-pages/company/company.module';
 
@@ -26,13 +25,6 @@ export const routes: Routes = [
     canActivate: [UserAuthenticationGuard]
   },
   {
-    path: 'partner',
-    component: MainLayoutComponent,
-    loadChildren: () => PartnerModule,
-    data: {pageTitle: 'Partner'},
-    canActivate: [UserAuthenticationGuard]
-  },
-  {
     path: 'addcompany',
     component: MainLayoutComponent,
     loadChildren: () => AddCompanyModule,
@@ -50,7 +42,7 @@ export const routes: Routes = [
 
   {path: '#', redirectTo: 'login'},
 
-   {path: 'login', component: LoginComponent},
+  {path: 'login', component: LoginComponent},
 
   {path: '**', redirectTo: 'login'}
 

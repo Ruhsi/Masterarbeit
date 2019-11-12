@@ -1,16 +1,17 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {Company} from 'src/app/models/company/company';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {MatHorizontalStepper, MatSnackBar, MatSnackBarConfig} from "@angular/material";
 import {CompanyService} from 'src/app/services/company.service';
 import {Address} from 'src/app/models/partner/Address';
+import {Subscription} from "rxjs/internal/Subscription";
 
 @Component({
   selector: 'app-add-company',
   templateUrl: './add-company.component.html',
   styleUrls: ['./add-company.component.scss']
 })
-export class AddCompanyComponent implements OnInit {
+export class AddCompanyComponent implements OnInit, OnDestroy {
 
   durationInSeconds: number = 5;
 
@@ -20,6 +21,8 @@ export class AddCompanyComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
+
+  private addOrUpdateCompanySubscription: Subscription;
 
   @ViewChild('stepper', {static: false}) stepper: MatHorizontalStepper;
 
@@ -45,8 +48,12 @@ export class AddCompanyComponent implements OnInit {
     });
   }
 
+  ngOnDestroy(){
+    this.addOrUpdateCompanySubscription && this.addOrUpdateCompanySubscription.unsubscribe();
+  }
+
   addCompany(): void {
-    this.companyService.addOrUpdateCompany(this.company)
+    this.addOrUpdateCompanySubscription = this.companyService.addOrUpdateCompany(this.company)
       .subscribe((company: Company) => {
         this.openSnackbar("Unternehmen erfolgreich hinzugefügt!", "x");
         this.reset();

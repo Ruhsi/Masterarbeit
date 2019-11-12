@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {Partner} from "../../models/partner/Partner";
 import {Address} from "../../models/partner/Address";
@@ -10,6 +10,7 @@ import {Observable} from "rxjs/internal/Observable";
 import {map, startWith} from "rxjs/operators";
 import {CompanyService} from 'src/app/services/company.service';
 import {Company} from 'src/app/models/company/company';
+import {Subscription} from "rxjs/internal/Subscription";
 
 
 @Component({
@@ -17,7 +18,7 @@ import {Company} from 'src/app/models/company/company';
   templateUrl: './add-partner.component.html',
   styleUrls: ['./add-partner.component.scss']
 })
-export class AddPartnerComponent implements OnInit {
+export class AddPartnerComponent implements OnInit, OnDestroy {
 
   durationInSeconds: number = 5;
 
@@ -30,6 +31,8 @@ export class AddPartnerComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
+
+  private addOrUpdatePartnerSubscription: Subscription;
 
   @ViewChild('stepper', {static: false}) stepper: MatHorizontalStepper;
 
@@ -81,8 +84,10 @@ export class AddPartnerComponent implements OnInit {
             map(c => c ? this._filterCompanies(c) : this.companies.slice())
           );
       });
+  }
 
-
+  ngOnDestroy(){
+    this.addOrUpdatePartnerSubscription && this.addOrUpdatePartnerSubscription.unsubscribe();
   }
 
   addPhoneNumber(): void {
@@ -104,7 +109,7 @@ export class AddPartnerComponent implements OnInit {
   }
 
   addPartner(): void {
-    this.partnerService.addOrUpdatePartner(this.selectedCompany.id, this.partner)
+    this.addOrUpdatePartnerSubscription = this.partnerService.addOrUpdatePartner(this.selectedCompany.id, this.partner)
       .subscribe((partner: Partner) => {
         this.openSnackbar("Partner erfolgreich hinzugefügt!", "x");
         this.reset();

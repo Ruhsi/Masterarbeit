@@ -11,7 +11,7 @@ import {NavigationModule} from "./shared/navigation/navigation.module";
 import {HttpHeaderInterceptor} from "./shared/interceptors/HttpHeaderInterceptor";
 import { LoginComponent } from './signin/login/login.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { PartnerComponent } from './main-pages/partner/partner.component';
+import { PartnerComponent } from './main-pages/company/partner/partner.component';
 import { AddCompanyComponent } from './main-pages/add-company/add-company.component';
 import { CompanyComponent } from './main-pages/company/company.component';
 

@@ -1,19 +1,26 @@
-<mat-accordion>
-  <mat-expansion-panel *ngFor="let company of companies">
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        {{company?.creditorName}}
-      </mat-panel-title>
-      <mat-panel-description>
-        {{company?.address?.street + " " + company?.address?.streetNumber + ", " + company?.address?.postalCode + " " +
-        company?.address?.city}}
-      </mat-panel-description>
-    </mat-expansion-panel-header>
+<div *ngIf="!partnerSelected">
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let company of companies">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{company?.creditorName}}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{company?.address?.street + " " + company?.address?.streetNumber + ", " + company?.address?.postalCode + " "
+          +
+          company?.address?.city}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
 
-    <a href="/" *ngFor="let partner of company?.partners">
-      <p><b>{{partner?.titleBefore || ''}} {{partner?.lastname}}
-        {{partner?.firstname}} {{partner.titleAfter || ''}}</b></p>
-      <p style="margin-left: 10px;">Thema: {{partner?.topic}}</p>
-    </a>
-  </mat-expansion-panel>
-</mat-accordion>
+      <div *ngFor="let partner of company?.partners" (click)="openPartner(partner, company)">
+        <p><b>{{partner?.titleBefore || ''}} {{partner?.lastname}}
+          {{partner?.firstname}} {{partner.titleAfter || ''}}</b></p>
+        <p style="margin-left: 10px;">Thema: {{partner?.topic}}</p>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+<div *ngIf="partnerSelected">
+  <button class="btn btn-primary" (click)="partnerSelected = false">Zurück</button>
+  <app-partner></app-partner>
+</div>

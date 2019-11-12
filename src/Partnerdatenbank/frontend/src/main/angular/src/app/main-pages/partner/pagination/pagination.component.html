@@ -1,7 +1,0 @@
-<app-gridlist [partners]="partners" [pageIndex]="pageIndex" [pageSize]="pageSize" (reloadPartnersEvent)="reloadPartners()"></app-gridlist>
-
-<mat-paginator #paginator showFirstLastButtons
-               [length]="partners.length"
-               [pageSize]="this.pageSize"
-               [pageSizeOptions]="this.pageSizeOptions">
-</mat-paginator>

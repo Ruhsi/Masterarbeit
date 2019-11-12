@@ -4,10 +4,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AngularMaterialModule} from "../../material-module";
 import {companyRouting} from "./company.routing";
 import {CompanyComponent} from './company.component';
+import {PartnerComponent} from "./partner/partner.component";
 
 
 @NgModule({
-  declarations: [CompanyComponent],
+  declarations: [CompanyComponent, PartnerComponent],
   imports: [
     CommonModule,
     companyRouting,
