@@ -22,7 +22,7 @@ public class DocsisService {
 
     public ResponseEntity<List<Link>> getAllLinksOfPartner(Long partnerId) {
         // TODO add full url
-        List<Link> links = restTemplate.getForObject(restBaseServiceDocsis + "links/partner/"+partnerId,
+        List<Link> links = restTemplate.getForObject("http://localhost:8090/" + "links/partner/"+partnerId,
                 ArrayList.class);
         return new ResponseEntity<>(links, HttpStatus.OK);
     }

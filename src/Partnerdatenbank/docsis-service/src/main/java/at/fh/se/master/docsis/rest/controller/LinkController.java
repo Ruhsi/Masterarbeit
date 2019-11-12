@@ -28,6 +28,7 @@ public class LinkController implements LinkControllerApi {
 
     @Override
     public ResponseEntity<List<Link>> getAllLinksOfPartner(Long partnerId) {
+        List<Link> links = linkRepository.findByPartnerId(partnerId);
         return new ResponseEntity<>(linkRepository.findByPartnerId(partnerId), HttpStatus.OK);
     }
 
