@@ -1,0 +1,9 @@
+swarm:
+  deployment:
+    ${project.build.finalName}.war:
+      web:
+        login-config:
+          auth-method: "KEYCLOAK"
+        security-constraints:
+          - url-pattern: "/rest-api/*"
+            roles: "[client]"

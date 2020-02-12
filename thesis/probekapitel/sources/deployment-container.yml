@@ -1,0 +1,22 @@
+containers:
+  - name: "${project.artifactId}"
+    ports:
+      - containerPort: "8080"
+        protocol: "TCP"
+      - containerPort: "9990"
+        protocol: "TCP"
+    volumeMounts:
+      - name: "app-config"
+        mountPath: ${oc.secret-service-app.dir}
+    env:
+        # Necessary, otherwise java console won't work in Openshift
+      - name: "AB_JOLOKIA_HTTPS"
+        value: "true"
+        # OC-3.5, F8-3.5.32 builder image used agent
+        # incompatible with wildfly-swarm
+      - name: "AB_PROMETHEUS_OFF"
+        value: "true"
+      - name: "JAVA_MAX_MEM_RATIO"
+        value: "100"
+      - name: "JAVA_OPTIONS"
+        value: "-Dswarm.project.stage=openshift"

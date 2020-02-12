@@ -1,0 +1,11 @@
+# Thorntail.io fraction does not expose this parameter,
+# therefore provide it as a sytem property, which jaeger supports
+JAEGER_ENDPOINT: "${env.JAEGER_HOST}"
+
+swarm:
+  jaeger:
+    service-name: "${project.build.finalName}"
+    reporter-log-spans: "true"
+    reporter-flush-interval: "100"
+    sampler-type: "const"
+    sampler-parameter: "1"
