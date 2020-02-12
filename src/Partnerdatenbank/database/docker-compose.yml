@@ -1,0 +1,13 @@
+version: '3'
+services:
+  partner-database:
+    build: ./partner-database
+    container_name: "partner-database"
+    ports:
+      - 1433:1433
+  
+  docsis-database:
+    build: ./docsis-database
+    container_name: "docsis-database"
+    ports:
+      - 1434:1433

@@ -17,24 +17,21 @@ public class DocsisService {
     @Autowired
     private RestTemplate restTemplate;
 
-    @Value(value = "base.service.docsis")
+    @Value(value = "${base.service.docsis}")
     private String restBaseServiceDocsis;
 
     public ResponseEntity<List<Link>> getAllLinksOfPartner(Long partnerId) {
-        // TODO add full url
-        List<Link> links = restTemplate.getForObject("http://localhost:8090/" + "links/partner/"+partnerId,
+        List<Link> links = restTemplate.getForObject(restBaseServiceDocsis + "links/partner/"+partnerId,
                 ArrayList.class);
         return new ResponseEntity<>(links, HttpStatus.OK);
     }
 
     public ResponseEntity addLink(Link link) {
-        // TODO add full url
         restTemplate.postForObject(restBaseServiceDocsis + "link", link, Link.class);
         return new ResponseEntity(HttpStatus.OK);
     }
 
     public ResponseEntity deleteLink(Long id) {
-        // TODO add id
         restTemplate.delete(restBaseServiceDocsis + "link/" + id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
