@@ -20,7 +20,7 @@ export class PartnerService {
   }
 
   addOrUpdatePartner(id: number, partner: Partner): Observable<Partner> {
-    return this.http.post<Partner>(this.URL + "/docsis/" + id + "/partner",
+    return this.http.post<Partner>(this.URL + "/company/" + id + "/partner",
       JSON.stringify(partner, partner.constructor.prototype),
       {headers: this.headers})
       .pipe(

@@ -5,21 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1979edd-3bd5-438d-818d-ccb237e65c6e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dokumente/Ruhsam Christoph MA 2019_09_19 Expose v.1.0 korr.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../dokumente/Ruhsam Christoph MA 2019_09_19 Expose v.1.0.pdf" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/docsis-service/src/main/fabric8/deployment.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/service/DocsisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/service/DocsisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/create-db.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/create.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/CompanyServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/CompanyServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/CompanyControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/CompanyControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/LinkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/LinkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/LinkControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/LinkControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/PartnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/PartnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/PartnerControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/PartnerControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/UserControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/UserControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/provider/RestTemplateProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/provider/RestTemplateProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/security/configuration/CustomCorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/configuration/CustomCorsFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/security/configuration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/configuration/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/security/model/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/CustomUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/security/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/security/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/security/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/model/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/model/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/Link.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/model/MailAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/MailAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/model/Partner.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/Partner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/model/PhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/PhoneNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/repository/CompanyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/repository/PartnerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/repository/PartnerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/repository/UsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/service/DocsisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/service/DocsisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company-service/src/test/java/at/fh/se/master/docsis/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/test/java/at/fh/se/master/company/BackendApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/create-all.bat" beforeDir="false" afterPath="$PROJECT_DIR$/database/create-all.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/docsis-database/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/database/docsis-database/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docsis-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/DocsisServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/DocsisServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/rest/controller/LinkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/rest/controller/LinkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/rest/controller/LinkControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/rest/controller/LinkControllerApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/service/model/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/service/model/Link.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/service/repository/LinkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/service/repository/LinkRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docsis-service/src/test/java/at/fh/se/master/docsis/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/test/java/at/fh/se/master/company/BackendApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-company/add-company.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-company/add-company.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/company.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/company.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/partner.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/partner.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springandangular_projekt/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springandangular_projekt/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springandangular_projekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springandangular_projekt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springandangular_projekt/frontend/src/main/angular/frontend-gui" beforeDir="false" afterPath="$PROJECT_DIR$/../springandangular_projekt/frontend/src/main/angular/frontend-gui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/inhaltsverzeichnis/v1/Ruhsam Christoph MA 2019_10_24 Inhaltsverzeichnis v.1.0..pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../thesis/inhaltsverzeichnis/v1/Ruhsam Christoph MA 2019_10_24 Inhaltsverzeichnis v.1.0..pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/inhaltsverzeichnis/v1/Ruhsam Christoph MA 2019_10_24 Inhaltsverzeichnis v.1.0..tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../thesis/inhaltsverzeichnis/v1/Ruhsam Christoph MA 2019_10_24 Inhaltsverzeichnis v.1.0..tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/inhaltsverzeichnis/v1/title.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../thesis/inhaltsverzeichnis/v1/title.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../thesis/inhaltsverzeichnis/v1/title.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../thesis/inhaltsverzeichnis/v1/title.pdf" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/backend/target/" />
@@ -65,83 +97,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.yaml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/company-service/src/main/resources/application.yaml">
+      <file leaf-file-name="CompanyControllerApi.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/CompanyControllerApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+            <state relative-caret-position="289">
+              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml">
+      <file leaf-file-name="Link.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/service/model/Link.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+            <state relative-caret-position="204">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocsisService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/service/DocsisService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompanyRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/repository/CompanyRepository.java">
+      <file leaf-file-name="CustomUserDetails.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/CustomUserDetails.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/CompanyController.java">
+      <file leaf-file-name="Role.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/Role.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompanyControllerApi.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/CompanyControllerApi.java">
+      <file leaf-file-name="Users.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="153">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/UserController.java">
+      <file leaf-file-name="Company.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/Company.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="204">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserControllerApi.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/UserControllerApi.java">
+      <file leaf-file-name="company.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/models/company/company.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="221">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PartnerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/PartnerController.java">
+      <file leaf-file-name="deployment.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docsis-service/src/main/fabric8/deployment.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+            <state relative-caret-position="136">
+              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docsis-service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-868">
+              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yaml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -178,6 +222,14 @@
       <find>selectedComp</find>
       <find>comp</find>
       <find>@Val</find>
+      <find>actuator</find>
+      <find>opentra</find>
+      <find>cors</find>
+      <find>a</find>
+      <find>links/</find>
+      <find>/docsis</find>
+      <find>kreditor</find>
+      <find>kreditorname</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,28 +238,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/pom.xml" />
-        <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.scss" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerControllerApi.java" />
-        <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/partner.service.ts" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/at/fh/se/master/company/rest/controller/PartnerController.java" />
-        <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/service/model/Link.java" />
-        <option value="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/service/repository/CompanyRepository.java" />
-        <option value="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/rest/controller/CompanyControllerApi.java" />
-        <option value="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/rest/controller/CompanyControllerApi.java" />
         <option value="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/service/repository/LinkService.java" />
         <option value="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/rest/controller/CompanyController.java" />
         <option value="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/service/repository/LinkRepository.java" />
         <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/BackendApplication.java" />
         <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/BackendApplication.java" />
         <option value="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/BackendApplication.java" />
-        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/CompanyServiceApplication.java" />
         <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/DocsisServiceApplication.java" />
-        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/CompanyServiceApplication.java" />
         <option value="$PROJECT_DIR$/docsis-service/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/company-service/pom.xml" />
         <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/configuration/RestClientConfiguration.java" />
         <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/client/controller/UserController.java" />
         <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/provider/RestTemplateProvider.java" />
@@ -219,7 +257,6 @@
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/link.service.ts" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/partner/partner.service.ts" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/partner/partner.component.html" />
-        <option value="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/DocsisServiceApplication.java" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/partner/partner.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/shared/navigation/sidebar/sidebar.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/partner/partner.module.ts" />
@@ -228,7 +265,6 @@
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/company/company.component.html" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/company/company.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/company/partner/partner.component.html" />
-        <option value="$PROJECT_DIR$/docsis-service/pom.xml" />
         <option value="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/rest/controller/LinkController.java" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/company/partner/partner.component.ts" />
         <option value="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-partner/add-partner.component.ts" />
@@ -236,7 +272,23 @@
         <option value="$PROJECT_DIR$/company-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/service/DocsisService.java" />
         <option value="$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/DocsisServiceApplication.java" />
+        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/CompanyServiceApplication.java" />
+        <option value="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/DocsisServiceApplication.java" />
+        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/configuration/SecurityConfiguration.java" />
+        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/CompanyServiceApplication.java" />
+        <option value="$PROJECT_DIR$/company-service/pom.xml" />
         <option value="$PROJECT_DIR$/company-service/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/LinkControllerApi.java" />
+        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/LinkController.java" />
+        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/CompanyControllerApi.java" />
+        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/CompanyController.java" />
+        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/PartnerControllerApi.java" />
+        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/PartnerController.java" />
+        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/UserControllerApi.java" />
+        <option value="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/docsis-service/src/main/fabric8/deployment.yml" />
+        <option value="$PROJECT_DIR$/docsis-service/pom.xml" />
       </list>
     </option>
   </component>
@@ -262,6 +314,11 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="company-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="company-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
@@ -289,6 +346,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -299,102 +357,6 @@
             <path>
               <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
               <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="company-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="company-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="company-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="company-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="company-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="company-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="company-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="company-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="company-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="company-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="company-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
               <item name="docsis-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -416,58 +378,7 @@
               <item name="docsis-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="docsis" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="fabric8" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
@@ -476,221 +387,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="main-pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="main-pages" type="462c0819:PsiDirectoryNode" />
-              <item name="add-company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="main-pages" type="462c0819:PsiDirectoryNode" />
-              <item name="add-partner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="main-pages" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="main-pages" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="partner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="link" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="partner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="navigation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="navigation" type="462c0819:PsiDirectoryNode" />
-              <item name="sidebar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="angular" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
@@ -808,11 +509,11 @@
     </configuration>
     <configuration name="CompanyServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="company-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="at.fh.se.master.docsis.CompanyServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="at.fh.se.master.company.CompanyServiceApplication" />
     </configuration>
     <configuration name="DocsisServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="docsis-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="at.fh.se.master.docsis.DocsisServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="at.fh.se.master.company.DocsisServiceApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -871,44 +572,53 @@
       <workItem from="1573737107537" duration="231000" />
       <workItem from="1578753652927" duration="2029000" />
       <workItem from="1579166112166" duration="54000" />
-      <workItem from="1581501586566" duration="2291000" />
+      <workItem from="1581501586566" duration="6896000" />
+      <workItem from="1581687853466" duration="10829000" />
+      <workItem from="1582028788395" duration="4960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193986000" />
+    <option name="totallyTimeSpent" value="214380000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.4344473" side_tool="true" weight="0.28590786" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5012854" side_tool="true" weight="0.3292683" />
       <window_info anchor="right" id="Maven Projects" order="9" weight="0.3277635" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="CDI" order="10" />
       <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="TypeScript" order="8" weight="0.3292683" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Database" order="5" weight="0.32969153" />
       <window_info id="Structure" order="1" sideWeight="0.32525253" side_tool="true" weight="0.25578406" />
       <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4974293" weight="0.34823847" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.3292683" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3292683" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Run Dashboard" visible="true" weight="0.3292683" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49871466" weight="0.47696477" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3292683" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49550128" weight="0.30487806" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3292683" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.5655527" weight="0.38346884" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.67474747" visible="true" weight="0.29241645" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.56491005" visible="true" weight="0.38346884" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.67474747" visible="true" weight="0.30012855" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.32969153" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
       <window_info anchor="right" id="SciView" order="11" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -916,14 +626,41 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.3292683" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TypeScript" order="8" weight="0.3292683" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.3292683" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Codota" order="10" weight="0.32969153" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -943,28 +680,129 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/DocsisServiceApplication.java">
+    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/service/model/Link.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/CustomUserDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/LinkControllerApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/models/company/company.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/DocsisServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="94" column="20" selection-start-line="94" selection-start-column="20" selection-end-line="94" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docsis-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="79" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/configuration/SecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="81" selection-start-line="58" selection-start-column="81" selection-end-line="58" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="19" selection-start-line="5" selection-start-column="2" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/CompanyServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3910">
+          <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/DocsisServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/service/DocsisService.java">
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/service/DocsisService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/DocsisServiceApplication.java">
+    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/DocsisServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/service/DocsisService.java">
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/service/DocsisService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
@@ -992,90 +830,196 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/company-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/DocsisServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/company-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/repository/CompanyRepository.java">
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/repository/CompanyRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/CompanyController.java">
+    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/resources/application.properties" />
+    <entry file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-spi/2.9.2/springfox-spi-2.9.2.jar!/springfox/documentation/spi/DocumentationType.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/CompanyControllerApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/UserControllerApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/PartnerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="46" column="22" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/service/DocsisService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml">
+    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/DocsisServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        <state relative-caret-position="260">
+          <caret line="72" column="11" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/configuration/SecurityConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="66" column="47" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/CompanyServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="243" selection-start-line="243" selection-end-line="243" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/target/classes/application.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/company-service/src/main/resources/application.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        <state relative-caret-position="102">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.8.RELEASE/spring-web-5.1.8.RELEASE.jar!/org/springframework/web/bind/annotation/ResponseBody.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/LinkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/CompanyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/PartnerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/service/DocsisService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/LinkControllerApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/UserControllerApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/PartnerControllerApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/CompanyControllerApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/service/model/Link.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/CustomUserDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/main/angular/src/app/models/company/company.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/fabric8/deployment.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docsis-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-868">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
         </state>
       </provider>
     </entry>

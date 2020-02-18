@@ -3,3 +3,4 @@ pushd partner-database
 popd
 pushd docsis-database
 ./create.bat
+popd

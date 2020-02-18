@@ -19,7 +19,7 @@ private readonly URL = configuration.BASEURL;
   ) { }
 
   addOrUpdateCompany(company: Company): Observable<Company> {
-    return this.http.post<Company>(this.URL + "/docsis", JSON.stringify(company, company.constructor.prototype), {headers: this.headers})
+    return this.http.post<Company>(this.URL + "/company", JSON.stringify(company, company.constructor.prototype), {headers: this.headers})
       .pipe(
         retry(1)
       );

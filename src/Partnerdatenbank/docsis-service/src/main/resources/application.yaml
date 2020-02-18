@@ -4,7 +4,19 @@ spring:
   profiles:
     active: dev
   application:
-    name: ${project.artifactId}
+      name: '@project.artifactId@'
+management:
+  endpoint:
+    info:
+      enabled: true
+    health:
+      enabled: true
+    metrics:
+      enabled: true
+    logfile:
+      enabled: true
+    httptrace:
+      enabled: true
 
 ---
 
