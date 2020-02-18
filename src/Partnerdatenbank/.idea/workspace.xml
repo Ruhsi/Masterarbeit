@@ -5,50 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1979edd-3bd5-438d-818d-ccb237e65c6e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/docsis-service/src/main/fabric8/deployment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/CompanyServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/CompanyServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/CompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/CompanyControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/CompanyControllerApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/LinkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/LinkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/LinkControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/LinkControllerApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/PartnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/PartnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/PartnerControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/PartnerControllerApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/controller/UserControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/controller/UserControllerApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/rest/provider/RestTemplateProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/rest/provider/RestTemplateProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/security/configuration/CustomCorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/configuration/CustomCorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/security/configuration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/configuration/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/security/model/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/CustomUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/security/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/security/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/security/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/security/service/CustomUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/model/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/model/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/model/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/Link.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/model/MailAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/MailAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/model/Partner.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/Partner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/model/PhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/model/PhoneNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/repository/CompanyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/repository/PartnerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/repository/PartnerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/repository/UsersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/docsis/service/service/DocsisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/java/at/fh/se/master/company/service/service/DocsisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/company-service/src/test/java/at/fh/se/master/docsis/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/company-service/src/test/java/at/fh/se/master/company/BackendApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/create-all.bat" beforeDir="false" afterPath="$PROJECT_DIR$/database/create-all.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/docsis-database/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/database/docsis-database/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docsis-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/DocsisServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/DocsisServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/rest/controller/LinkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/rest/controller/LinkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/rest/controller/LinkControllerApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/rest/controller/LinkControllerApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/service/model/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/service/model/Link.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/docsis/service/repository/LinkRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/java/at/fh/se/master/company/service/repository/LinkRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docsis-service/src/test/java/at/fh/se/master/docsis/BackendApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/docsis-service/src/test/java/at/fh/se/master/company/BackendApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-company/add-company.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/main-pages/add-company/add-company.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/company.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/company.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/partner.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/angular/src/app/services/partner.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springandangular_projekt/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springandangular_projekt/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springandangular_projekt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springandangular_projekt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../springandangular_projekt/frontend/src/main/angular/frontend-gui" beforeDir="false" afterPath="$PROJECT_DIR$/../springandangular_projekt/frontend/src/main/angular/frontend-gui" afterDir="false" />
@@ -185,7 +141,7 @@
         <entry file="file://$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
-              <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -388,6 +344,32 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Partnerdatenbank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Partnerdatenbank" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="angular" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -574,12 +556,12 @@
       <workItem from="1579166112166" duration="54000" />
       <workItem from="1581501586566" duration="6896000" />
       <workItem from="1581687853466" duration="10829000" />
-      <workItem from="1582028788395" duration="4960000" />
+      <workItem from="1582028788395" duration="5326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214380000" />
+    <option name="totallyTimeSpent" value="214746000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1019,7 +1001,7 @@
     <entry file="file://$PROJECT_DIR$/docsis-service/src/main/resources/application.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
         </state>
       </provider>
     </entry>
