@@ -1,0 +1,12 @@
+oc login -u system:admin
+oc adm policy add-cluster-role-to-user cluster-admin developer
+oc login -u developer -p developer
+expose route with secure route on web console
+oc get route
+copy login cmd
+docker login -u developer -p <token> <route>
+docker build -t mssql .
+docker tag mssql <route>/partnerdatenbank/mssql
+docker push <route>/partnerdatenbank/mssql
+oc adm policy add-scc-to-user anyuid -z default
+oc new-app mssql
