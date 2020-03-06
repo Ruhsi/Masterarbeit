@@ -1,10 +1,19 @@
-server:
-  port: 8090
 spring:
   profiles:
-    active: dev
+    active: openshift
   application:
       name: '@project.artifactId@'
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
 management:
   endpoint:
     info:
@@ -26,17 +35,34 @@ spring:
     url: jdbc:sqlserver://127.0.0.1:1434;databaseName=DocsisDB
     username: sa
     password: Ruhsi@1234
-    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
-    database-platform: org.hibernate.dialect.SQLServer2012Dialect
-    show-sql: true
-    generate-ddl: true
     hibernate:
       ddl-auto: create-drop
-    properties:
-      hibernate:
-        jdbc:
-          lob:
-            non_contextual_creation: true
 
+---
 
+spring:
+  profiles: test
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.HSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+---
+
+spring:
+  profiles: openshift
+  datasource:
+      url: jdbc:sqlserver://${DATABASE_NAME}:${DATABASE_PORT};databaseName=${DATABASE_SERVICE_DOCSIS}
+      username: ${DATABASE_USERNAME}
+      password: ${DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update

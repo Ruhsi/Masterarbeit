@@ -3,8 +3,6 @@ package at.fh.se.master.company.rest.controller;
 
 import at.fh.se.master.company.service.model.Company;
 import at.fh.se.master.company.service.model.Partner;
-import at.fh.se.master.company.service.repository.CompanyRepository;
-import at.fh.se.master.company.service.repository.PartnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

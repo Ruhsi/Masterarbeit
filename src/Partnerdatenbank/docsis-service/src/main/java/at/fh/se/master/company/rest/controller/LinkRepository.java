@@ -1,4 +1,4 @@
-package at.fh.se.master.company.service.repository;
+package at.fh.se.master.company.rest.controller;
 
 import at.fh.se.master.company.service.model.Link;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -4,8 +4,10 @@ import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.validator.constraints.URL;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Data
 @NoArgsConstructor
@@ -34,8 +36,11 @@ public class Link {
     private long partnerId;
 
     @Column(name = "LINK", nullable = false)
+    @NotEmpty
+    @URL
     private String link;
 
+    @NotEmpty
     @Column(name = "LINK_DESCRIPTION", nullable = false)
     private String linkDescription;
 }

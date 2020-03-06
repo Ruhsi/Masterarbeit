@@ -1,7 +1,7 @@
 package at.fh.se.master.company.security.configuration;
 
 import at.fh.se.master.company.security.service.CustomUserDetailsService;
-import at.fh.se.master.company.service.repository.UsersRepository;
+import at.fh.se.master.company.rest.controller.UsersRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

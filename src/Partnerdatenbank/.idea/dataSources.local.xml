@@ -11,5 +11,11 @@
       <user-name>sa</user-name>
       <introspection-schemas>PartnerDB:dbo</introspection-schemas>
     </data-source>
+    <data-source name="@mssql-server-linux-myproject.10.0.75.2.nip.io" uuid="8722f833-e57e-407f-b52d-cfefbf0b7539">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>sa</user-name>
+    </data-source>
   </component>
 </project>

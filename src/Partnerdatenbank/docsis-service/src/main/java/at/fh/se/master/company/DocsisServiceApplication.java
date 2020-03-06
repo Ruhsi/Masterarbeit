@@ -1,11 +1,12 @@
 package at.fh.se.master.company;
 
 import at.fh.se.master.company.service.model.Link;
-import at.fh.se.master.company.service.repository.LinkRepository;
+import at.fh.se.master.company.rest.controller.LinkRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -22,6 +23,7 @@ public class DocsisServiceApplication {
     }
 
     @Bean
+    @Profile("!test")
     public CommandLineRunner commandLineRunner(LinkRepository linkRepository) {
         return args -> {
             linkRepository.deleteAll();

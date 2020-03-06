@@ -3,7 +3,7 @@ package at.fh.se.master.company.security.service;
 
 import at.fh.se.master.company.security.model.CustomUserDetails;
 import at.fh.se.master.company.security.model.Users;
-import at.fh.se.master.company.service.repository.UsersRepository;
+import at.fh.se.master.company.rest.controller.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

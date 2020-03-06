@@ -5,32 +5,27 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @RequestMapping("/")
 public interface LinkControllerApi {
 
-
-    @RequestMapping(value = "links/partner/{id}", method = RequestMethod.OPTIONS)
-    String getAllLinksOfPartnerPreflight(@PathVariable("id") Long id);
-
+    @CrossOrigin
     @GetMapping(value = "links/partner/{id}",
             produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     ResponseEntity<List<Link>> getAllLinksOfPartner(@PathVariable("id") Long partnerId);
 
-    @RequestMapping(value = "link", method = RequestMethod.OPTIONS)
-    String addLinkPreflight();
-
+    @CrossOrigin
     @PostMapping(value = "link",
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    ResponseEntity<Link> addLink(@RequestBody Link link);
+    ResponseEntity<Link> addLink(@RequestBody @NotNull @Valid Link link);
 
-    @RequestMapping(value = "link/{id}", method = RequestMethod.OPTIONS)
-    String deleteLinkPreflight(@PathVariable Long id);
-
+    @CrossOrigin
     @DeleteMapping(value = "link/{id}",
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
