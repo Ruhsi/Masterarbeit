@@ -1,15 +1,19 @@
-server:
-  port: 8080
 spring:
   profiles:
-    active: dev
+    active: openshift
   application:
-    name: name
-opentracing:
-  jaeger:
-    udp-sender:
-      host: localhost
-      port: 6831
+      name: '@project.artifactId@'
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    show-sql: true
+    generate-ddl: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
 management:
   endpoint:
     info:
@@ -22,28 +26,55 @@ management:
       enabled: true
     httptrace:
       enabled: true
+
 ---
 
 spring:
   profiles: dev
   datasource:
-    url: jdbc:sqlserver://127.0.0.1:1433;databaseName=PartnerDB
+    url: jdbc:sqlserver://127.0.0.1:1434;databaseName=DocsisDB
     username: sa
     password: Ruhsi@1234
-    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
-    database-platform: org.hibernate.dialect.SQLServer2012Dialect
-    show-sql: true
-    generate-ddl: true
     hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        jdbc:
-          lob:
-            non_contextual_creation: true
-
+      ddl-auto: create-drop
 base:
   service:
     docsis: http://localhost:8090/
+---
 
+spring:
+  profiles: test
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.HSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+---
+
+spring:
+  profiles: openshift
+  datasource:
+      url: jdbc:sqlserver://${DATABASE_NAME}:${DATABASE_PORT};databaseName=${DATABASE_SERVICE_PARTNER}
+      username: ${DATABASE_USERNAME}
+      password: ${DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+base:
+  service:
+    docsis: ${SERVICE_DOCSIS_NAME}:${SERVICE_DOCSIS_PORT}
+
+
+#opentracing:
+#  jaeger:
+#    udp-sender:
+#      host: localhost
+#      port: 6831

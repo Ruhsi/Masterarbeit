@@ -1,0 +1,87 @@
+spec:
+  template:
+    spec:
+      containers:
+        - name: ${project.artifactId}
+          image: 172.30.1.1:5000/partnerdatenbank/partner-service:latest
+          imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              cpu: "0.1"
+              memory: 128Mi
+            limits:
+              cpu: "1.0"
+              memory: 384Mi
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+              scheme: HTTP
+            successThreshold: 2
+            failureThreshold: 10
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
+              scheme: HTTP
+            successThreshold: 1
+            failureThreshold: 10
+            initialDelaySeconds: 60
+            periodSeconds: 30
+            timeoutSeconds: 5
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DATABASE_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: partnerdatenbank-config
+                  key: DATABASE_NAME
+            - name: DATABASE_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: partnerdatenbank-config
+                  key: DATABASE_PORT
+            - name: DATABASE_SERVICE_PARTNER
+              valueFrom:
+               configMapKeyRef:
+                  name: partnerdatenbank-config
+                  key: DATABASE_SERVICE_PARTNER
+            - name: SERVICE_PARTNER_PORT
+              valueFrom:
+               configMapKeyRef:
+                  name: partnerdatenbank-config
+                  key: SERVICE_PARTNER_PORT
+            - name: SERVICE_DOCSIS_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: partnerdatenbank-config
+                  key: SERVICE_DOCSIS_NAME
+            - name: SERVICE_DOCSIS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: partnerdatenbank-config
+                  key: SERVICE_DOCSIS_PORT
+            - name: SERVICE_JAEGER_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: partnerdatenbank-config
+                  key: SERVICE_JAEGER_HOST
+            - name: SERVICE_JAEGER_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: partnerdatenbank-config
+                  key: SERVICE_JAEGER_PORT
+            - name: DATABASE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: partnerdatenbank-secret-config
+                  key: DATABASE_USERNAME
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: partnerdatenbank-secret-config
+                  key: DATABASE_PASSWORD
