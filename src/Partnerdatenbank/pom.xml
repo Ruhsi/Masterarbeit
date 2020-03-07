@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>company-service</module>
+        <module>partner-service</module>
         <module>docsis-service</module>
         <module>frontend</module>
     </modules>

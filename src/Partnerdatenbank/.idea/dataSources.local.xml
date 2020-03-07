@@ -17,5 +17,15 @@
       <first-sync>true</first-sync>
       <user-name>sa</user-name>
     </data-source>
+    <data-source name="PartnerDB@127.0.0.1 [2]" uuid="9a0a2576-d9bf-4fd9-a650-984fe01936d5">
+      <database-info product="Microsoft SQL Server" version="14.00.3048" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 7.2 for SQL Server" driver-version="7.2.1.0">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sa</user-name>
+      <introspection-schemas>PartnerDB:dbo</introspection-schemas>
+    </data-source>
   </component>
 </project>

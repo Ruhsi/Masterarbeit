@@ -32,13 +32,15 @@ management:
 spring:
   profiles: dev
   datasource:
-    url: jdbc:sqlserver://127.0.0.1:1434;databaseName=DocsisDB
+    url: jdbc:sqlserver://127.0.0.1:1433;databaseName=PartnerDB
     username: sa
     password: Ruhsi@1234
   jpa:
     hibernate:
       ddl-auto: create-drop
-
+base:
+  service:
+    docsis: http://localhost:8090/
 ---
 
 spring:
@@ -54,15 +56,27 @@ spring:
     username: sa
     password:
     driver-class-name: org.h2.Driver
-
+base:
+  service:
+    docsis: http://localhost:8090/
 ---
 
 spring:
   profiles: openshift
   datasource:
-      url: jdbc:sqlserver://${DATABASE_NAME}:${DATABASE_PORT};databaseName=${DATABASE_SERVICE_DOCSIS}
+      url: jdbc:sqlserver://${DATABASE_NAME}:${DATABASE_PORT};databaseName=${DATABASE_SERVICE_PARTNER}
       username: ${DATABASE_USERNAME}
       password: ${DATABASE_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: create
+base:
+  service:
+    docsis: ${SERVICE_DOCSIS_NAME}:${SERVICE_DOCSIS_PORT}
+
+
+#opentracing:
+#  jaeger:
+#    udp-sender:
+#      host: localhost
+#      port: 6831

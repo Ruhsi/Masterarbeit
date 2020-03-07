@@ -6,13 +6,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.6.RELEASE</version>
-        <relativePath/>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>at.fh.se.master</groupId>
-    <artifactId>docsis-service</artifactId>
+    <artifactId>partner-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>docsis-service</name>
-    <description>This is the docsis service where links to a partner can be retrieved.</description>
+    <name>partner-service</name>
+    <description>This is the partner service where companies and partners can be retrieved.</description>
 
     <properties>
         <java.version>11</java.version>
@@ -24,7 +24,8 @@
         <io.opentracing.contrib.version>2.0.3</io.opentracing.contrib.version>
         <javax.xml.bind.version>2.3.0</javax.xml.bind.version>
         <com.h2database.version>1.4.194</com.h2database.version>
-
+        <org.jboss.resteasy-client.version>4.4.0.Final</org.jboss.resteasy-client.version>
+        
         <fabric8.mode>openshift</fabric8.mode>
         <fabric8.generator.fromMode>docker</fabric8.generator.fromMode>
         <fabric8.generator.from>registry.access.redhat.com/openjdk/openjdk-11-rhel7:latest</fabric8.generator.from>
@@ -61,7 +62,32 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- RestEasy -->
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-client</artifactId>
+            <version>${org.jboss.resteasy-client.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-multipart-provider</artifactId>
+            <version>${org.jboss.resteasy-client.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Lombok -->
@@ -79,15 +105,15 @@
 
         <!-- Database -->
         <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>RELEASE</version>
             <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
         </dependency>
 
         <dependency>
@@ -112,7 +138,7 @@
         <!-- OpenTracing -->
         <dependency>
             <groupId>io.opentracing.contrib</groupId>
-            <artifactId>opentracing-spring-jaeger-web-starter</artifactId>
+            <artifactId>opentracing-spring-jaeger-cloud-starter</artifactId>
             <version>${io.opentracing.contrib.version}</version>
         </dependency>
 
@@ -127,12 +153,13 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.190</version>
+            <version>${com.h2database.version}</version>
             <scope>runtime</scope>
         </dependency>
     </dependencies>
