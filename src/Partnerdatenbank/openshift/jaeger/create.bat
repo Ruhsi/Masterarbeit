@@ -1,0 +1,1 @@
+oc process -f jaeger-all-in-one-template.yml | oc create -f -
