@@ -1,6 +1,6 @@
-package at.fh.se.master.docsis.service.service;
+package at.fh.se.master.partner.service.service;
 
-import at.fh.se.master.docsis.service.model.Link;
+import at.fh.se.master.partner.service.model.Link;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -27,6 +27,7 @@ public class DocsisService {
     public ResponseEntity<List<Link>> getAllLinksOfPartner(Long partnerId) {
         List<Link> links = restTemplate.getForObject(restBaseServiceDocsis + "links/partner/"+partnerId,
                 ArrayList.class);
+        System.out.println(restBaseServiceDocsis);
         return new ResponseEntity<>(links, HttpStatus.OK);
     }
 

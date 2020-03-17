@@ -3,15 +3,15 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs/internal/Observable";
 import {Partner} from '../models/partner/Partner';
 import {retry} from "rxjs/operators";
-import {configuration} from 'src/configuration/configuration';
 import {Link} from '../models/link/Link';
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LinkService {
 
-  private readonly URL = configuration.BASEURL;
+  private readonly URL = environment.backendOriginSegment + ":" + environment.backendOriginPort;
 
   private headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
 

@@ -1,7 +1,7 @@
-package at.fh.se.master.docsis.security.configuration;
+package at.fh.se.master.partner.security.configuration;
 
-import at.fh.se.master.docsis.rest.repository.UsersRepository;
-import at.fh.se.master.docsis.security.service.CustomUserDetailsService;
+import at.fh.se.master.partner.rest.repository.UsersRepository;
+import at.fh.se.master.partner.security.service.CustomUserDetailsService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -118,9 +118,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 UrlBasedCorsConfigurationSource();
 
         CorsConfiguration configuration = new CorsConfiguration().applyPermitDefaultValues();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200", "http://frontend-partnerdatenbank.10.0.75.2.nip.io"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowCredentials(true);
+        configuration.setExposedHeaders(Arrays.asList("Authorization", "content-type"));
+        configuration.setAllowedHeaders(Arrays.asList("Authorization", "content-type"));
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }

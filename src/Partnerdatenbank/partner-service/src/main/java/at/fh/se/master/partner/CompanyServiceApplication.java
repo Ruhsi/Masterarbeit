@@ -1,11 +1,11 @@
-package at.fh.se.master.docsis;
+package at.fh.se.master.partner;
 
-import at.fh.se.master.docsis.security.model.Role;
-import at.fh.se.master.docsis.security.model.Users;
-import at.fh.se.master.docsis.service.model.*;
-import at.fh.se.master.docsis.rest.repository.CompanyRepository;
-import at.fh.se.master.docsis.rest.repository.PartnerRepository;
-import at.fh.se.master.docsis.rest.repository.UsersRepository;
+import at.fh.se.master.partner.rest.repository.CompanyRepository;
+import at.fh.se.master.partner.rest.repository.PartnerRepository;
+import at.fh.se.master.partner.rest.repository.UsersRepository;
+import at.fh.se.master.partner.security.model.Role;
+import at.fh.se.master.partner.security.model.Users;
+import at.fh.se.master.partner.service.model.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.CommandLineRunner;
@@ -28,7 +28,7 @@ import java.util.Set;
 
 @SpringBootApplication
 @EnableSwagger2
-@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy(proxyTargetClass = true)
 public class CompanyServiceApplication {
 
     public static void main(String[] args) {
@@ -236,7 +236,12 @@ public class CompanyServiceApplication {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("*").allowedMethods("*");
+
+                registry
+                        .addMapping("*")
+                        .allowedMethods("OPTIONS", "GET", "PUT", "POST", "DELETE")
+                        .allowedOrigins("*")
+                        .allowedHeaders("*");
             }
         };
     }

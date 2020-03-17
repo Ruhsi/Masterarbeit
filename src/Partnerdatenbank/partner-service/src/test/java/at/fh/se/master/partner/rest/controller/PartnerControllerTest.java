@@ -1,8 +1,8 @@
-package at.fh.se.master.docsis.rest.controller;
+package at.fh.se.master.partner.rest.controller;
 
-import at.fh.se.master.docsis.BackendApplicationTests;
-import at.fh.se.master.docsis.rest.repository.CompanyRepository;
-import at.fh.se.master.docsis.service.model.*;
+import at.fh.se.master.partner.BackendApplicationTests;
+import at.fh.se.master.partner.rest.repository.CompanyRepository;
+import at.fh.se.master.partner.service.model.*;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

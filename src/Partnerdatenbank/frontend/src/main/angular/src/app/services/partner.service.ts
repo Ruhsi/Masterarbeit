@@ -4,13 +4,14 @@ import {Partner} from "../models/partner/Partner";
 import {configuration} from "../../configuration/configuration";
 import {retry} from "rxjs/operators";
 import {Observable} from "rxjs/internal/Observable";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PartnerService {
 
-  private readonly URL = configuration.BASEURL;
+  private readonly URL = environment.backendOriginSegment + ":" + environment.backendOriginPort;
 
   private headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
 

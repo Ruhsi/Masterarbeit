@@ -1,4 +1,4 @@
-package at.fh.se.master.docsis.security.model;
+package at.fh.se.master.partner.security.model;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,4 +1,4 @@
-package at.fh.se.master.docsis.rest.controller;
+package at.fh.se.master.partner.rest.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +10,7 @@ import java.security.Principal;
 @RequestMapping("/")
 public interface UserControllerApi {
 
+    @CrossOrigin
     @RequestMapping(method = RequestMethod.OPTIONS, value = "/login")
     ResponseEntity<String> login(HttpServletResponse res);
 

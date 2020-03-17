@@ -1,4 +1,4 @@
-package at.fh.se.master.docsis.security.model;
+package at.fh.se.master.partner.security.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

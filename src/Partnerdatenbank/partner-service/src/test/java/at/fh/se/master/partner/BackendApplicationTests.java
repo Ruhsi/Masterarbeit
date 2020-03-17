@@ -1,4 +1,4 @@
-package at.fh.se.master.docsis;
+package at.fh.se.master.partner;
 
 import org.junit.Test;
 import org.springframework.boot.CommandLineRunner;

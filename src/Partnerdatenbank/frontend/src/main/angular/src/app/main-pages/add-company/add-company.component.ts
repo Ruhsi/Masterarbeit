@@ -20,7 +20,6 @@ export class AddCompanyComponent implements OnInit, OnDestroy {
   isLinear = true;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
-  thirdFormGroup: FormGroup;
 
   private addOrUpdateCompanySubscription: Subscription;
 
@@ -37,7 +36,14 @@ export class AddCompanyComponent implements OnInit, OnDestroy {
     this.company.address = new Address();
 
     this.firstFormGroup = this._formBuilder.group({
-      nameCtrl: [this.company.creditorName],
+      shortNameCtrl: [this.company.shortName],
+      mandantCtrl: [this.company.mandant],
+      creditorNumberCtrl: [this.company.creditorNumber],
+      creditorNameCtrl: [this.company.creditorName],
+      creditorStatusCtrl: [this.company.creditorStatus],
+      kontoNrSAPOldCtrl: [this.company.kontoNrSAPOld],
+      aendCounterCtrl: [this.company.aendCounter]
+
     });
     this.secondFormGroup = this._formBuilder.group({
       streetCtrl: [this.company.address.street],

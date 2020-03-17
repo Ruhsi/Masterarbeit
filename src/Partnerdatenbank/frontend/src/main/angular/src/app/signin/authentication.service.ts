@@ -1,16 +1,16 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {configuration} from "../../configuration/configuration";
 import {BehaviorSubject} from "rxjs/internal/BehaviorSubject";
 import {Observable} from "rxjs/internal/Observable";
 import {Principal} from "../models/user/Principal";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  private readonly BASEURL: string = configuration.BASEURL;
+  private readonly BASEURL: string = environment.backendOriginSegment + ":" + environment.backendOriginPort;
 
   private loggedInUserSubject: BehaviorSubject<Principal>;
   public loggedInUser: Observable<Principal>;
@@ -28,6 +28,8 @@ export class AuthenticationService {
     let formData: FormData = new FormData();
     formData.append("username", username);
     formData.append("password", password);
+
+    console.log("got here");
 
     return this.http.post(this.BASEURL + "/login", formData);
   }

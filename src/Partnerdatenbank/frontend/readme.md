@@ -6,10 +6,7 @@ Password: chrisi
 
 ### Start local
 <code>npm install</code> \
-<code>ng serve</code>
+<code>ng serve --configuration=dev</code>
 
 ### Deploy in OpenShift
-<code>npx nodeshift --strictSSL=false 
---dockerImage=nodeshift/ubi8-s2i-web-app 
---imageTag=10.x --build.env OUTPUT_DIR=dist/
-      frontend --expose</code>
+<code>npx nodeshift --strictSSL=false --dockerImage=nodeshift/ubi8-s2i-web-app --imageTag=10.x --build.env OUTPUT_DIR=dist/frontend --expose</code>

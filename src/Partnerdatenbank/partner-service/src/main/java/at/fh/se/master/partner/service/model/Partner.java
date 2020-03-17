@@ -1,4 +1,4 @@
-package at.fh.se.master.docsis.service.model;
+package at.fh.se.master.partner.service.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AccessLevel;
@@ -65,7 +65,7 @@ public class Partner implements Serializable {
     @NotEmpty
     private String topic;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinTable(name = "COMPANY_PARTNER_REFERENCE_MAPPING", joinColumns = @JoinColumn(name = "PARTNER_ID"), inverseJoinColumns = @JoinColumn(name = "COMPANY_ID"))
     @JsonIgnore
     private Company company;

@@ -1,7 +1,7 @@
-package at.fh.se.master.docsis.rest.repository;
+package at.fh.se.master.partner.rest.repository;
 
 
-import at.fh.se.master.docsis.security.model.Users;
+import at.fh.se.master.partner.security.model.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

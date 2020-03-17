@@ -1,7 +1,7 @@
-package at.fh.se.master.docsis.rest.controller;
+package at.fh.se.master.partner.rest.controller;
 
-import at.fh.se.master.docsis.service.model.Company;
-import at.fh.se.master.docsis.service.model.Partner;
+import at.fh.se.master.partner.service.model.Company;
+import at.fh.se.master.partner.service.model.Partner;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

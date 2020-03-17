@@ -23,8 +23,10 @@
         <io.springfox.version>2.9.2</io.springfox.version>
         <io.opentracing.contrib.version>2.0.3</io.opentracing.contrib.version>
         <javax.xml.bind.version>2.3.0</javax.xml.bind.version>
-        <com.h2database.version>1.4.194</com.h2database.version>
+        <com.h2database.version>1.4.200</com.h2database.version>
         <org.jboss.resteasy-client.version>4.4.0.Final</org.jboss.resteasy-client.version>
+        <!-- AspectJ -->
+        <aspectj.version>1.7.4</aspectj.version>
         
         <fabric8.mode>openshift</fabric8.mode>
         <fabric8.generator.fromMode>docker</fabric8.generator.fromMode>

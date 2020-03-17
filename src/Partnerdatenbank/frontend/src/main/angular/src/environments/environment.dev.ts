@@ -2,6 +2,6 @@ export const environment = {
   production: false,
 
   // BASE URL
-  backendOriginSegment: 'localhost',
-  backendOriginPort: 4200
+  backendOriginSegment: 'http://localhost',
+  backendOriginPort: 8090
 };
