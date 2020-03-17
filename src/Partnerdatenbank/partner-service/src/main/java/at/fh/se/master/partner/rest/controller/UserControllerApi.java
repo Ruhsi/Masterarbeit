@@ -1,4 +1,4 @@
-package at.fh.se.master.partner.rest.controller;
+package at.fh.se.master.docsis.rest.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

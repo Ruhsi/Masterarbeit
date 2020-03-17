@@ -1,4 +1,4 @@
-package at.fh.se.master.partner.rest.provider;
+package at.fh.se.master.docsis.rest.provider;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

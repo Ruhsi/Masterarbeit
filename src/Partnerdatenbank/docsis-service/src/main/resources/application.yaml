@@ -2,7 +2,7 @@ spring:
   profiles:
     active: openshift
   application:
-      name: '@project.artifactId@'
+      name: docsis-service
   datasource:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
@@ -38,6 +38,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
+opentracing:
+  jaeger:
+    udp-sender:
+      host: localhost
+      port: 6831
 
 ---
 
@@ -66,3 +71,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+opentracing:
+  jaeger:
+    udp-sender:
+      host: jaeger-agent
+      port: 6831

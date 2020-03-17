@@ -1,7 +1,7 @@
-package at.fh.se.master.partner.security.configuration;
+package at.fh.se.master.docsis.security.configuration;
 
-import at.fh.se.master.partner.rest.repository.UsersRepository;
-import at.fh.se.master.partner.security.service.CustomUserDetailsService;
+import at.fh.se.master.docsis.rest.repository.UsersRepository;
+import at.fh.se.master.docsis.security.service.CustomUserDetailsService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

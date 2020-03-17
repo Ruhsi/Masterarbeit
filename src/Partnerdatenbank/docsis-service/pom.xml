@@ -61,6 +61,11 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
@@ -112,7 +117,7 @@
         <!-- OpenTracing -->
         <dependency>
             <groupId>io.opentracing.contrib</groupId>
-            <artifactId>opentracing-spring-jaeger-web-starter</artifactId>
+            <artifactId>opentracing-spring-jaeger-cloud-starter</artifactId>
             <version>${io.opentracing.contrib.version}</version>
         </dependency>
 
@@ -132,7 +137,7 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.190</version>
+            <version>1.4.200</version>
             <scope>runtime</scope>
         </dependency>
     </dependencies>

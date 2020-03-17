@@ -1,9 +1,9 @@
-package at.fh.se.master.partner.security.service;
+package at.fh.se.master.docsis.security.service;
 
 
-import at.fh.se.master.partner.rest.repository.UsersRepository;
-import at.fh.se.master.partner.security.model.CustomUserDetails;
-import at.fh.se.master.partner.security.model.Users;
+import at.fh.se.master.docsis.rest.repository.UsersRepository;
+import at.fh.se.master.docsis.security.model.CustomUserDetails;
+import at.fh.se.master.docsis.security.model.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

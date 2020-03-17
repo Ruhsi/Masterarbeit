@@ -1,17 +1,18 @@
-package at.fh.se.master.partner;
+package at.fh.se.master.docsis;
 
-import at.fh.se.master.partner.security.model.Role;
-import at.fh.se.master.partner.security.model.Users;
-import at.fh.se.master.partner.service.model.*;
-import at.fh.se.master.partner.rest.repository.CompanyRepository;
-import at.fh.se.master.partner.rest.repository.PartnerRepository;
-import at.fh.se.master.partner.rest.repository.UsersRepository;
+import at.fh.se.master.docsis.security.model.Role;
+import at.fh.se.master.docsis.security.model.Users;
+import at.fh.se.master.docsis.service.model.*;
+import at.fh.se.master.docsis.rest.repository.CompanyRepository;
+import at.fh.se.master.docsis.rest.repository.PartnerRepository;
+import at.fh.se.master.docsis.rest.repository.UsersRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Profile;
 import org.springframework.web.filter.CommonsRequestLoggingFilter;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -27,6 +28,7 @@ import java.util.Set;
 
 @SpringBootApplication
 @EnableSwagger2
+@EnableAspectJAutoProxy
 public class CompanyServiceApplication {
 
     public static void main(String[] args) {
@@ -254,4 +256,5 @@ public class CompanyServiceApplication {
         loggingFilter.setMaxPayloadLength(64000);
         return loggingFilter;
     }
+
 }

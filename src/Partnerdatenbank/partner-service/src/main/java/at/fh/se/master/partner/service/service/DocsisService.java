@@ -1,6 +1,6 @@
-package at.fh.se.master.partner.service.service;
+package at.fh.se.master.docsis.service.service;
 
-import at.fh.se.master.partner.service.model.Link;
+import at.fh.se.master.docsis.service.model.Link;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package at.fh.se.master.partner.service.model;
+package at.fh.se.master.docsis.service.model;
 
 import lombok.AccessLevel;
 import lombok.Data;
