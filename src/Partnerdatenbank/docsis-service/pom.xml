@@ -15,7 +15,7 @@
     <description>This is the docsis service where links to a partner can be retrieved.</description>
 
     <properties>
-        <java.version>11</java.version>
+        <!--<java.version>11</java.version>-->
 
         <fabric8-maven-plugin.version>4.4.0</fabric8-maven-plugin.version>
         <org.springframework.cloud.version>1.0.3.RELEASE</org.springframework.cloud.version>
