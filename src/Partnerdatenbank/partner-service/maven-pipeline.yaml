@@ -7,7 +7,7 @@ parameters:
   description: The name assigned to all of the application objects defined in this template.
   displayName: Application Name
   required: true
-  value: docsis-service
+  value: partner-service
 - name: GIT_SOURCE_URL
   description: The source URL for the application
   displayName: Source URL
@@ -76,7 +76,7 @@ objects:
         jenkinsfile: |-
           try {
             timeout(time: 40, unit: 'MINUTES') {
-                def appName="docsis-service"
+                def appName="partner-service"
                 def project=""
 
                 node {
@@ -90,8 +90,8 @@ objects:
                     git url: "https://github.com/Ruhsi/Masterarbeit.git", branch: "master"
                   }
                   stage("Build WAR") {
-                    sh "mvn clean package -f src/Partnerdatenbank/docsis-service/pom.xml -DskipTests"
-                    stash name:"war", includes:"src/Partnerdatenbank/docsis-service/target/*"
+                    sh "mvn clean package -f src/Partnerdatenbank/partner-service/pom.xml -DskipTests"
+                    stash name:"war", includes:"src/Partnerdatenbank/partner-service/target/*"
                   }
                 }
 
@@ -100,7 +100,7 @@ objects:
                     dir("war") {
                       unstash name:"war"
                     }
-                    sh "oc start-build ${appName}-docker --from-file=war/src/Partnerdatenbank/docsis-service/target/docsis-service-0.0.1-SNAPSHOT.jar -n ${project}"
+                    sh "oc start-build ${appName}-docker --from-file=war/src/Partnerdatenbank/partner-service/target/partner-service-0.0.1-SNAPSHOT.jar -n ${project}"
                     timeout(time: 40, unit: 'MINUTES') {
                       openshift.withCluster() {
                         openshift.withProject() {
@@ -156,11 +156,11 @@ objects:
       dockerfile: |-
         FROM registry.access.redhat.com/openjdk/openjdk-11-rhel7:latest
         ENV JAVA_OPTS="-Djava.net.preferIPv4Stack=true -Xrs"
-        COPY docsis-service-0.0.1-SNAPSHOT.jar /docsis-service-0.0.1-SNAPSHOT.jar
+        COPY partner-service-0.0.1-SNAPSHOT.jar /partner-service-0.0.1-SNAPSHOT.jar
         EXPOSE 8080
-        ENTRYPOINT exec java $JAVA_OPTS -jar /docsis-service-0.0.1-SNAPSHOT.jar
+        ENTRYPOINT exec java $JAVA_OPTS -jar /partner-service-0.0.1-SNAPSHOT.jar
       binary:
-        asFile: docsis-service-0.0.1-SNAPSHOT.war
+        asFile: partner-service-0.0.1-SNAPSHOT.war
       type: Docker
     strategy:
       dockerStrategy:
