@@ -1,0 +1,92 @@
+\chapter{Evaluierung der Anwendung}
+In diesem Abschnitt werden die Evaluierung des Frontends sowie Whitebox- und Blackbox-Tests beschrieben. Auch die Evaluierung der Microservice-Architektur wird in diesem Abschnitt gezeigt.
+
+\section{Evaluierung des Frontends}
+Das Frontend wurde mit Angular 8 implementiert. Dabei wurde Angular Material für Designkomponenten herangezogen. Diese Komponenten bieten für Entwickler eine einfache Möglichkeit, moderne UI Komponenten zu verwenden. Diese bieten schnelle Entwicklung, konsistentes Design und sind zudem auf Performanz in allen unterstützten Browsern ausgerichtet. Durch das Responsive Design der Angular Material-Komponenten kann die Anwendung ohne Probleme auf Desktop-, Mobil- und Webanwendungen genutzt werden. Zu den Angular Material-Komponenten werden lediglich eigens erstellte Komponenten verwendet. Es werden also keine Drittanbieter-Komponenten verwendet. Da der Rechenaufwand der eigens erstellten Komponenten und Services sehr gering ist und Angular Material auf Performanz ausgerichtet ist, ist auch die Performanz des gesamten Frontends sehr gut.
+
+Da die 3 Banken IT GmbH diese Anwendung in eine bestehende Portallösung integrieren möchte, wurde auf das Design des Frontends weniger geachtet. Der Autor dieser Arbeit hat keinen Zugriff auf diese Portallösung und auf die darin laufenden Applikationen, auch nicht auf Stylesheets, die in den Applikationen in der Portallösung angewendet wurden. Die 3 Banken IT GmbH ändert das Design der Anwendung dahingehend selbst. Es wurde jedoch das Responsive Design und die User Experience bedacht. Durch die Nutzung der Angular Material-Komponenten ist Responsive Design out-of-the-box integriert. Die einfache Navigation und die Validierung der Input-Felder im Frontend erhöhen die User Experience der Anwendung.
+
+Die strikte Trennung der Seiten von den dazugehörigen Services und den zusätzlichen Komponenten, wie Guards oder Interceptoren, im Code erleichtert die Wartung und Weiterentwicklung des Frontends ungemein. Zudem wurden zwei Environments für die lokale Entwicklung und das Deployment in OpenShift angelegt. Durch den Konfigurationsparameter \textit{-{}-configuration=<environment>} beim Starten oder Deployen der Anwendung kann das passende Environment verwendet werden, ohne Änderungen am Code vornehmen zu müssen.
+
+\section{Whitebox-Tests}
+Whitebox-Tests sind eine Möglichkeit, das System oder Systemkomponenten zu testen. Der Tester kennt dabei die Funktionsweise der Applikation. Basierend auf der Funktionsweise der Anwendung kann der Tester Testszenarien designen und ausführen. Diese Testszenarien sollten 100\% des Codes abdecken. Dadurch ist sichergestellt, dass jedes Stück Code auch getestet wird. Durch das Erstellen von Tests auf diesem granularen Level und durch 100\% Code Coverage wird sichergestellt, dass die Applikation robust ist und wie erwartet funktioniert.
+
+Whitebox-Testing wird auch als strukturiertes Testing oder code-basiertes Testing bezeichnet. Die interne Struktur der Anwendung ist dem Tester dabei bekannt. Whitebox-Testing wird für ein niedrigeres Level an Tests verwendet. Dazu gehören Unit-Tests und Integration-Tests. Bei Unit-Tests werden einzelne Codestücke, wie Methoden oder Funktionen, auf ihre Funktionalität getestet. Integration-Tests testen das Zusammenspiel mehrerer Komponenten miteinander. Whitebox-Testing kann grundsätzlich einfach automatisiert werden. Hauptziel von Whitebox-Tests ist die Überprüfung der Qualität der einzelnen Codestücke.
+Sobald weitere Funktionalität in die Anwendung integriert wird, müssen für diese ein neuer Test erstellt und alle anderen Tests ausgeführt werden, um sicherzustellen, dass durch das neue Feature keine Fehler in den bestehenden Code eingebaut wurden.
+
+Zum Speichern von Objekten in Testszenarien wird eine H2 In-Memory Datenbank verwendet.
+Die Konfiguration sowie ein Test werden in Listing \ref{lst:whiteboxTest} gezeigt.
+
+\begin{lstlisting}[language=java, caption=PartnerControllerTest.java, label=lst:whiteboxTest]
+	@RunWith(SpringRunner.class)
+	@ActiveProfiles("test")
+	@SpringBootTest(classes = BackendApplicationTests.class)
+	@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
+	public class PartnerControllerTest {
+		@Autowired
+		private PartnerControllerApi partnerController;
+		
+		@Autowired
+		private CompanyRepository companyRepository;
+		
+		@Before
+		public void setUp() throws Exception {
+			// given
+			addTestCompany();
+			addTestPartner();
+		}
+		
+		@Test
+		public void getAllPartners() {
+			// when
+			List<Partner> found = partnerController.getAllPartners().getBody();
+			
+			// then
+			assertThat(found.size()).isEqualTo(1);
+		}
+	}
+\end{lstlisting}
+
+Die Annotation \textbf{@ActiveProfile} gibt an, dass bei der Ausführung des Tests die Konfiguration \glqq test\grqq{} verwendet werden soll. Bei dieser Konfiguration sind die In-Memory Datenbank sowie Parameter für den Zugriff auf diese hinterlegt.
+
+Die Annotation \textbf{@SpringBootTest} wird von Spring Boot benötigt, um zu kennzeichnen, dass diese Klasse ein Test ist. 
+
+Durch die Annotation \textbf{@DirtiesContext} wird die Datenbank nach jedem Test neu initialisiert. Somit ist sichergestellt, dass sich vorhergehende Tests nicht auf nachfolgende Tests auswirken.
+
+In der Klasse selbst werden die zu testenden Komponenten injiziert. Vor jedem Test wird die \textit{setUp}-Methode ausgeführt. Diese fügt ein Unternehmen und einen Partner in die Datenbank ein.
+
+Der eigentliche Test wird mit der Annotation \textbf{@Test} gekennzeichnet. Dabei wird das Paradigma \textit{given-when-then} implementiert. Im \textit{given}-Abschnitt werden Daten in die Datenbank eingefügt. Im \textit{when}-Abschnitt wird die zu testende Methode ausgeführt. In diesem Fall die Methode \textit{getAllPartners} der Klasse PartnerController. Im \textit{then}-Abschnitt wird überprüft, ob der \textit{when}-Abschnitt die richtigen Daten liefert.
+
+Bei der Ausführung eines Tests wird die gesamte Applikation hochgefahren, der Test ausgeführt und die Applikation wieder heruntergefahren. Dies ist ein sehr großer zeitlicher Aufwand, sobald viele Tests vorhanden sind. Aber nur so kann sichergestellt werden, dass sich einzelne Tests nicht beeinflussen.
+
+Da das Speichern, Holen und Löschen von Unternehmen und Partnern sehr wenig Logik benötigt, werden durch die Whitebox-Tests in der Partnerdatenbank nahezu 100\% des Codes abgedeckt. Bei späterem Hinzufügen von weiteren Geschäftsfällen und dazugehöriger Logik muss die 3 Banken IT GmbH darauf achten, ausreichende und qualitativ hochwertige Tests zu schreiben. 
+
+\section{Blackbox-Tests}
+Bei Blackbox-Tests kennt der Tester die interne Struktur der Applikation nicht. Diese Art des Testens wird auch als Data-Driven Testing oder Box Testing bezeichnet. Die Validierung basiert auf den Erwartungen, die nach dem Ausführen einer Funktion auftreten sollen. Blackbox-Tests sind am besten für Systemtests oder Akzeptanztests geeignet. Da keine Programmierfähigkeiten nötig sind, um Blackbox-Tests zu erstellen, können auch z.B. Projektleiter oder Geschäftsführer diese Tests als Akzeptanzkriterien für Features verwenden. Diese Tests sind sehr schwer automatisierbar \cite{SoftwareQualityAssurance}. 
+
+Vor dem Testen sollte ein Anforderungsdokument erstellt werden. Diese Anforderungen werden durch die Blackbox-Tests validiert. Ein solcher Test greift oft auf Codestücke auch über Servicegrenzen hinweg zu und ist dadurch gut geeignet zum Testen von großen Codesegmenten.
+Jedoch kann dabei die Code Coverage nicht überprüft werden. Dadurch ist ungewiss, wie viel Prozent des Codes wirklich durch die Blackbox-Tests abgedeckt werden. Auch die Qualität des Codes kann dadurch nicht überprüft werden. Es kann lediglich überprüft werden, ob die Anforderung erfüllt wurde \cite{SoftwareQualityAssurance}.
+
+Zur Validierung der Anforderungen werden gültige und ungültige Input-Parameter erstellt. Bei der Durchführung eines Tests mit gültigen Parametern wird überprüft, ob der richtige Output ausgegeben wird. Dies kann eine Textausgabe, ein Wechsel zu einer neuen Seite, eine grafische Erfolgsdarstellung, etc. sein. Die Applikation wird auch mit ungültigen Parametern getestet. Dabei wird überprüft, ob die Applikation dabei nicht abstürzt und sich auch bei nicht validen Daten richtig verhält.
+
+Die definierten Anforderungen an die Partnerdatenbank sind: Unternehmen anlegen, Partner anlegen, Unternehmen löschen, Partner deaktivieren, Unternehmen deaktivieren und Partner inklusive Links anzeigen.
+Alle Positiv-Tests laufen erfolgreich durch. Tests mit invaliden Parametern laufen nur teilweise durch. Dazu müssen noch weitere Validierungen auf der Backend-Seite implementiert werden. Auch die Darstellung eines Fehlers im Frontend muss mit der 3 Banken IT GmbH noch geklärt werden.
+
+\section{Architekturevaluierung}
+Das Backend der Partnerdatenbank wurde als Microservice-Architektur entwickelt. Dies bringt einige Vor-, aber auch Nachteile gegenüber Monolithen.
+Die Wartung und das Deployment einzelner Microservices ist durch die geringe Größe um einiges einfacher als bei einer gesamten monolithischen Applikation. Das Testen von Microservices ist übersichtlicher, jedoch über Servicegrenzen hinweg schwieriger, da einzelne Serviceaufrufe gemockt werden müssen.
+Sind einzelne Anforderungen in anderen Programmiersprachen besser zu lösen, kann bei Microservice-Architekturen für jedes Microservice eine andere Programmiersprache verwendet werden. Monolithen müssen dagegen in einer Programmiersprache implementiert werden.
+
+Gerade bei der Nutzung von Cloud-Technologien, wie OpenShift, ist die Skalierbarkeit der Microservices von großer Bedeutung. Bei der Partnerdatenbank dient das Partner-Service als Kompositionsservice und ist dadurch natürlich der Single-Point-of-Failure. Durch die Verwendung von OpenShift können mehrere Pods mit demselben Service hochgefahren werden. Davor kann ein Loadbalancer geschaltet werden, der das Weiterleiten der Aufrufe meist mit dem Round-Robin-Verfahren übernimmt. Fällt ein Pod aus, fährt OpenShift wieder einen hoch, damit das angegebene Minimum erreicht ist. Dadurch wird auch der Single-Point-of-Failure umgangen.
+
+Der Verfasser hätte auch die Service-Choreografie als Designvariante verwenden können. Bei der Service-Choreografie reden Services miteinander und es gibt kein zentrales Kompositionsservice. Jedes Service ist dabei vom Frontend aus erreichbar. Dadurch muss auch die Sicherheitskonfiguration für jedes Microservice eigens implementiert werden. Auch das Session-Management gestaltet sich schwieriger. Ist der Login in Service A und das Frontend ruft Service B auf, muss sich Service B vergewissern, dass sich dieser User in Service A bereits erfolgreich eingeloggt hat. Auch der klare Workflow bei Aufrufen geht bei der Service-Choreografie verloren. Jedes Service kann mit jedem anderen Service kommunizieren. Bei der Service-Orchestrierung kann jedes Service nur mit dem zentralen Kompositionsservice interagieren. Dadurch ist ein klarer Workflow ersichtlich. Aufgrund dieser Vorteile hat sich der Autor für die Service-Orchestrierung entschieden.
+
+Bei der Architektur der Backend-Applikationen wurde auf das Paradigma \textit{Infrastructure-as-Code} geachtet. 
+Infrastructure-as-Code ist ein Konzept zur Automatisierung der Systemerstellung und dem Änderungsmanagement mit Methoden aus der Softwareentwicklung. Systeme werden mit einer Domain Specific Language (DSL), definiert. Diese wird von einem Tool interpretiert. Dieses Tool erstellt daraufhin eine Instanz des Systems oder wendet Änderungen an.
+Infrastructure-as-Code definiert wiederholbare Routinen. Deskriptoren werden als Templates, Cookbooks, Recipes oder Playbooks bezeichnet. Die DSL erlaubt Ressourcen für ein System zu definieren. Solche Ressourcen können z.B. ein Netzwerk, Speicher oder Routing sein.
+Mit Infrastructure-as-Code kann ein System sehr einfach reproduziert werden. Die Systemparameter sind im Code beschrieben und bei einer Neuerstellung muss nicht mit der grafischen Oberfläche hantiert werden \cite{OpenshiftDoc}.
+
+Auch auf lose Kopplung der Microservices wurde geachtet. Dadurch, dass Microservices lediglich REST-Aufrufe zur Kommunikation miteinander verwenden, ist die lose Kopplung sichergestellt. Ein wichtiger Faktor ist auch die Erweiterbarkeit der Anwendung. Die Partnerdatenbank ist lediglich ein Prototyp für die 3 Banken IT GmbH und soll zeigen, wie eine Microservice-Architektur erstellt werden kann und diese Services in OpenShift deployt werden können. Da weitere Geschäftsfälle in die Applikation integriert werden sollen, wurde besonders auf die einfache Erweiterbarkeit geachtet.
+
+Weitere Evaluierungskriterien müssen mit der 3 Banken IT GmbH noch näher besprochen werden. Diese sind jedoch nicht mehr Teil dieser Arbeit.
+

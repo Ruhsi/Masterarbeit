@@ -1,7 +1,16 @@
 \chapter{Kurzfassung}
+In dieser Arbeit wird die Implementierung einer Microservice-Architektur von Grund auf gezeigt. Auch das Deployment dieser Microservice-Architektur in OpenShift wird gezeigt. 
 
-\begin{german}
-An dieser Stelle steht eine Zusammenfassung der Arbeit, Umfang
-max.\ 1 Seite. 
-...
-\end{german}
+Microservices sind ein Architekturansatz, um große, schwergewichtige Applikationen in kleine, konsistente und voneinander klar abgegrenzte Services zu zerlegen.
+Zu Beginn werden Microservices von service-orientierten Architekturen abgegrenzt und die Vor- und Nachteile von Microservice-Architekturen behandelt.
+
+Für das Deployment der Microservices in OpenShift müssen die Microservices vorher mit Docker containerisiert werden. Auch der Prozess der Containerisierung und Docker werden in dieser Arbeit behandelt. 
+
+OpenShift setzt auf Kubernetes auf. Kubernetes ist eine Container-as-a-Service-Plattform zum Managen und Orchestrieren von Containern. Die Komponenten und Hauptbestandteile von Kubernetes werden ebenfalls in dieser Arbeit behandelt, da diese relevant für den Einsatz von OpenShift sind.
+
+Container-as-a-Service reicht jedoch für Menschen ohne Verständnis für Containerisierung und Orchestrierung von Containern nicht aus. Dafür wird Platform-as-a-Service benötigt. OpenShift ist eine Platform-as-a-Service-Plattform und bietet nicht nur eine Container Runtime, sondern auch Tools zum Bauen, Deployen und Monitoring von containerisierten Applikationen. Auch Sicherheitsmechanismen zum Absichern der Anwendungen stellt OpenShift bereit.
+In dieser Arbeit werden die Hauptbestandteile von OpenShift und die OpenShift-Objekte näher beschrieben.
+
+Den Hauptteil dieser Schrift macht das Design und die Implementierung der Partnerdatenbank aus. Die Partnerdatenbank ist eine Applikation für die 3 Banken IT GmbH und dient zum Erstellen, Löschen und Anzeigen von Unternehmen und Partnern. Die Partnerdatenbank ist ein Prototyp für die 3 Banken IT GmbH zur Erstellung von Microservice-Architekturen und dem Deployment in OpenShift. Auch Microservice-Tools zur einfacheren Entwicklung werden in dieser Arbeit vorgestellt.
+
+Abschließend folgt eine Evaluierung der Anwendung sowie die Beschreibung der Tests und eine Zusammenfassung über diese Schrift. Auch ein kurzer Ausblick über die weitere Entwicklung der Partnerdatenbank wird gegeben.

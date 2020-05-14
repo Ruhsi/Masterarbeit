@@ -1,0 +1,316 @@
+%%% File encoding: UTF-8
+%% äöüÄÖÜß  <-- no German Umlauts here? Use an UTF-8 compatible editor!
+
+%%% Magic comments for setting the correct parameters in compatible IDEs
+% !TeX encoding = utf8
+% !TeX program = pdflatex 
+% !TeX spellcheck = de_DE
+% !BIB program = biber
+
+\documentclass[master,german]{hgbthesis}
+
+% Permissible options in [..]: 
+%   Type of work: diploma, master (default), bachelor, internship 
+%   Main language: german, english (default)
+%%%----------------------------------------------------------
+
+\RequirePackage[utf8]{inputenc}		% Remove when using lualatex or xelatex entfernen!
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{minted}
+\usepackage{listings}
+\usepackage{varioref}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{url}
+\usepackage{hyperref}
+
+
+
+\usepackage{listingsutf8}
+
+\lstdefinelanguage{docker}{
+	keywords={FROM, RUN, COPY, ADD, ENTRYPOINT, CMD,  ENV, ARG, WORKDIR, EXPOSE, LABEL, USER, VOLUME, STOPSIGNAL, ONBUILD, MAINTAINER},
+	keywordstyle=\color{blue}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{\#},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+	basicstyle=\sourceFontSize,
+}
+
+\lstdefinelanguage{docker-compose}{
+	keywords={image, environment, ports, container_name, ports, volumes, links},
+	keywordstyle=\color{blue}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{\#},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+	basicstyle=\sourceFontSize
+}
+\lstdefinelanguage{docker-compose-2}{
+	keywords={version, volumes, services},
+	keywordstyle=\color{blue}\bfseries,
+	keywords=[2]{image, environment, ports, container_name, ports, links, build},
+	keywordstyle=[2]\color{olive}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{\#},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+	basicstyle=\sourceFontSize
+}
+\lstdefinelanguage{xml}{
+	keywords={dependency, groupId, artifactId},
+	keywordstyle=\color{olive}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{\#},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+	basicstyle=\sourceFontSize
+}
+
+\lstdefinelanguage{yml}{
+	keywords={spring, base, server, opentracing},
+	keywordstyle=\color{olive}\bfseries,
+	keywords=[2]{profiles, datasource, service, port, jaeger},
+	keywordstyle=[2]\color{teal}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{\#},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+	basicstyle=\sourceFontSize
+}
+
+\lstdefinelanguage{json}{
+	keywords={configurations, dev, fileReplacements},
+	keywordstyle=\color{olive}\bfseries,
+	keywords=[2]{replace, with},
+	keywordstyle=[2]\color{teal}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{\#},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+	basicstyle=\sourceFontSize
+}
+
+\lstdefinelanguage{JavaScript}{
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, export, const, private, readonly},
+	keywordstyle=\color{olive}\bfseries,
+	ndkeywords={class, export, boolean, throw, implements, import, this, constructor, this},
+	ndkeywordstyle=\color{teal}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+	basicstyle=\sourceFontSize
+}
+
+\lstdefinelanguage{java}{
+	keywords={@Around, @Component, @Aspect, @Retryable, @Recover, @RequestMapping, @CrossOrigin, @PostMapping, @ResponseBody, @RequestBody, @NotNull, @Valid, @Override, @Configuration, @Value, @Autowired, @SpringBootApplication, @EnableSwagger2, @Bean, @Traced, @RunWith, @ActiveProfiles, @SpringBootTest, @DirtiesContext, @Before, @Test},
+	keywordstyle=\color{olive}\bfseries,
+	keywords=[2]{true, false},
+	keywordstyle=[2]\color{red}\bfseries,
+	keywords=[3]{public, class, return, new, private, package, throws, void},
+	keywordstyle=[3]\color{brown}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+	basicstyle=\sourceFontSize
+}
+
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\pagestyle{fancy}
+\geometry{top=2.5cm,left=2.5cm,bottom=2.5cm,right=2.5cm}
+
+
+% -----------------------------------------------------
+\newenvironment{code}{\captionsetup{type=listing}}{}
+% -----------------------------------------------------
+% -----------------------------------------------------
+\newcommand{\mysubsubsection}[1]{{\subsubsection{\textbf{#1}}}}
+\newcommand{\mentionedtext}[1]{{\textit{{#1}}}}
+\newcommand{\sourceDir}{./sources}
+\newcommand{\sourceFontSize}{\fontsize{10pt}{11.5}}
+\newcommand{\quotes}[1]{``#1''}
+\newmintedfile[bashFile]{bash}{
+	linenos=false, 
+	frame=none, 
+	breaklines=true, 
+	tabsize=2,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	baselinestretch=1,
+	fontsize=\sourceFontSize,
+	basicstyle=\sourceFontSize
+}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,
+	showstringspaces=false,
+	commentstyle=\color{red},
+	keywordstyle=\color{blue}
+}
+
+\newmintedfile[javaFile]{java}{
+	keywords={@Around, @Component, @Aspect, @Retryable, @Recover},
+	keywordstyle=\color{olive}\bfseries,
+	linenos=false, 
+	frame=none, 
+	breaklines=true, 
+	tabsize=2,
+	numbersep=5pt,
+	xleftmargin=10pt,
+	baselinestretch=1,
+	fontsize=\sourceFontSize,
+	basicstyle=\sourceFontSize
+}
+
+\newmintinline[inlineJava]{java}{
+	fontsize=\sourceFontSize,
+	basicstyle=\sourceFontSize
+}
+\newmintinline[inlineBash]{bash}{
+	fontsize=\sourceFontSize,
+	basicstyle=\sourceFontSize
+}
+
+\lstdefinelanguage{sql}
+{
+	morekeywords={CREATE, SELECT, FROM, WHERE, HAVING
+	DATABASE},
+	morecomment=[l]{\#},
+	morestring=[b]",
+	basicstyle=\sourceFontSize
+}
+
+\lstset{
+	columns=flexible,
+	keepspaces=true,
+	showstringspaces=false,
+	basicstyle=\tiny\ttfamily,
+	commentstyle=\color{gray},
+	keywordstyle=\color{purple},
+	stringstyle=\color{green},
+	basicstyle=\sourceFontSize
+}
+
+
+% -----------------------------------------------------
+\graphicspath{{images/}}    % location of images and graphics
+\logofile{logo}				% logo file = images/logo.pdf (use \logofile{} for no logo)
+
+\bibliography{references.bib}  	% name of bibliography file (references.bib)
+
+
+\setlength{\parindent}{0pt}
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries}{\thesection}{1em}{}
+
+\renewcommand{\labelalphaothers}{\addspace et al.}
+\DeclareLabelalphaTemplate{
+	\labelelement{
+		\field[final]{shorthand}
+		\field{label}
+		\field[pcompound=true,namessep={\addhighpenspace und \addhighpenspace }]{labelname}
+	}
+	\labelelement{
+		\literal{,\addhighpenspace}
+	}
+	\labelelement{
+		\field{year}
+	}
+}
+
+
+%%%----------------------------------------------------------
+% Title page entries
+%%%----------------------------------------------------------
+
+%%% Entries for ALL types of work: --------------------------
+%\title{Implementierung einer Partnerdatenbank und Evaluierung des verwendeten Technologiestack} %no camel used (and Camel)
+%\author{Ing. Thomas Herzog B.Sc}
+%\programname{Software Engineering}
+\placeofstudy{Hagenberg}
+\dateofsubmission{2020}{05}{30}	% {YYYY}{MM}{DD}
+
+%%% Entries for Bachelor theses only: -----------------------
+%\thesisnumber{XXXXXXXXXX-A}   %e.g. 1310238045-A  
+% (Stud-ID, A = 1st Bachelor thesis)
+%\semester{Fall Semester 2017} 	% Fall/Spring Semester YYYY
+%\coursetitle{Introduction to Trivial Problems 1} 
+\advisor{FH-Prof. DI Dr. Herwig Mayr}
+
+%%% Restricted publication license instead of CC (master only):
+%\cclicense
+
+%%%----------------------------------------------------------
+\begin{document}
+%%%----------------------------------------------------------
+
+%%%----------------------------------------------------------
+\frontmatter							% title part (roman page numbers)
+%%%----------------------------------------------------------
+
+\includepdf[pages={1,2}]{title.pdf}
+%\maketitle
+\tableofcontents
+\listoffigures
+
+%\include{front/preface} 	% preface is optional
+\include{front/kurzfassung}
+\include{front/abstract}
+
+%%%----------------------------------------------------------
+\mainmatter          			% main part (arabic page numbers)
+%%%----------------------------------------------------------
+
+\include{./chapters/Einleitung}
+\include{./chapters/ServiceorientierteArchitekturenUndMicroservices}
+\include{./chapters/ContainerisierungMitDocker}
+\include{./chapters/OpenShift}
+\include{./chapters/Partnerdatenbank}
+\include{./chapters/ImplementierungDerPartnerdatenbank}
+\include{./chapters/EvaluierungDerArchitektur}
+\include{./chapters/Zusammenfassung}
+
+
+\MakeBibliography 
+
+%%%----------------------------------------------------------
+\end{document}
+%%%----------------------------------------------------------

@@ -5,14 +5,26 @@
 %% GitHub: https://github.com/Digital-Media/HagenbergThesis
 %% File encoding: ASCII
 
-\ProvidesPackage{hgbbib}[2018/02/19]
+%\ProvidesPackage{hgbbib}[2018/02/19]
 
 \usepackage{csquotes}				% recommended for biblatex
 
 %Note: biblatex with bibtex backend is frozen at version 1.7.
-\usepackage[style=alphabetic,backend=biber,bibencoding=auto]{biblatex}
 
-\ExecuteBibliographyOptions{bibwarn=true,sortcites=true,defernumbers=true,isbn=false,doi=false,backref=true}
+%\usepackage[style=alphabetic,  natbib=true,bibencoding=auto, maxnames = 9, minnames=2, maxcitenames=2,
+%mincitenames=1]{biblatex}
+%\usepackage[backend=biber, natbib, style=alphabetic, bibencoding=auto]{biblatex}
+
+\usepackage[
+backend=biber, style=alphabetic,
+ citestyle=authoryear, maxcitenames=2, maxbibnames=10, maxalphanames=2, minalphanames=1
+]{biblatex}
+
+%\usepackage[style=alphabetic, citestyle=authoryear-icomp,maxbibnames=9,maxcitenames=1,uniquelist=false,
+%backend=biber, bibencoding=auto]{biblatex}
+
+
+\ExecuteBibliographyOptions{bibwarn=true,sortcites=true,defernumbers=true,isbn=false,doi=false,backref=false}
 
 %% titles of reference section + 3 categories of references:
 \newcommand{\@bibtitle}{Quellenverzeichnis}
@@ -107,6 +119,7 @@
 	 \setcounter{biburllcpenalty}{1}%
 	 \biburlsetup}%
 	{}
+
 
 % Currently the only public macro:
 % \MakeBibliography ... creates a reference section split subsections (default)

@@ -1,0 +1,106 @@
+\chapter{Einleitung}
+In diesem Kapitel wird die grundsätzliche Motivation zu Microservices und Cloudtechnologien gezeigt. Auch das Ziel der Partnerdatenbank, ein Leitfaden, sowie die Gliederung der Schrift werden in diesem Abschnitt beschrieben.
+
+\section{Motivation zur Architektur von Microservices}
+Enterprise-Softwarearchitektur entwickelt sich durch neue Architekturdesigns immer weiter. Paradigmenwechsel im Technologieumfeld und der Wunsch nach besseren und schnelleren Applikationen tragen zur Entwicklung der Architektur bei \cite{MicroservicesForTheEnterprise}.
+
+Microservices wurden als Architekturdesign sehr gut aufgenommen und sind nun weit verbreitet. Sie tragen zur schnelleren und sichereren Entwicklung der Erstellung von Software bei. Die Microservice-Architektur stärkt den Bau von Softwaresystemen als Sammlung von unabhängigen und autonomen Services. Microservices werden durch lose Kopplung unabhängig voneinander entwickelt, deployt und skaliert. Durch den Zusammenschluss aller Microservices entsteht eine gemeinsame Applikation \cite{MicroservicesForTheEnterprise}.
+
+Ein Microservice ist dabei eine Implementierung einer wohldefinierten Businessfunktion und ist über ein Netzwerk erreichbar. Microservices weisen ein wohldefiniertes Interface auf. Die Aufrufer des Microservice verlassen sich auf das Interface und kümmern sich nicht um die dahinterliegende Implementierung \cite{MicroservicesForTheEnterprise}.
+
+Eines der Kernkonzepte von Microservices ist, dass die Architektur der Services auf Businesszwecke abgestimmt und definiert sein muss. Ein Microservice fokussiert lediglich auf einen Businessaspekt. Ist dies nicht der Fall, muss das Microservice in weitere Microservices zerlegt werden \cite{MicroservicesForTheEnterprise}.
+
+Durch das unabhängige Deployment der Microservices kann eine unabhängige Skalierung ermöglicht werden. Da sich Businessfunktionen bezüglich der Menge an Netzwerkverkehr unterscheiden, können einzelne Microservices einfach hochskaliert werden, ohne weitere Microservices hochskalieren zu müssen, die ohnehin wenig Netzwerkverkehr aufweisen. Dies spart Ressourcen und ist gerade beim Einsatz von Cloudtechnologien ein entscheidender Faktor \cite{MicroservicesForTheEnterprise}.
+
+
+\section{Motivation zum Einsatz von Cloudtechnologien}
+Cloudtechnologien präsentieren einen neuen Weg Applikationen zu teilen und zu deployen. Sie bieten Usern die Möglichkeit, Information im Internet gemeinsam und gleichzeitig zu bearbeiten, anzusehen und zu teilen. Die Cloud selbst ist ein Netzwerk von Datencentern, wobei jedes Datencenter eine Fülle von Rechnern aufweist, die gemeinsam interagieren. Die Cloud ist auch ein Set von Services, das eine skalierbare und anpassbare, billige Infrastruktur für Entwickler und Enduser bereitstellt. Auf diese Infrastruktur kann jederzeit sehr einfach zugegriffen werden \cite{CloudComputing}.
+
+Cloudanbieter stellen den Usern einen großen Pool an Ressourcen zur Verfügung mit der Möglichkeit, diese Ressourcen sehr einfach zu managen. Die wichtigsten Kernpunkte und Vorteile von Cloud Computing umfassen \cite{CloudComputing}:
+\begin{itemize}
+	\item \textbf{Agilität}: Agilität hilft beim schnellen und billigen Zurverfügungstellen von Ressourcen.
+	\item \textbf{Standortunabhängigkeit}: Auf Ressourcen kann von überall zugegriffen werden.
+	\item \textbf{Teilbarkeit}: Ressourcen werden von einem großen Pool an Usern geteilt.
+	\item \textbf{Zuverlässigkeit}: Ressourcen sind hoch verfügbar.
+	\item \textbf{Skalierbarkeit}: Dynamische Zurverfügungstellen von Daten hilft bei der Vermeidung von Bottleneck-Szenarien.
+	\item \textbf{Wartung}: User haben weniger Aufgaben bei Upgrades und beim Management von Ressourcen. Diese Aufgaben übernimmt der Cloud Provider.
+\end{itemize}
+
+Cloud Computing setzt dabei auf zwei wichtige Techniken \cite{CloudComputing}:
+\begin{enumerate}
+	\item \textbf{Serviceorientierte Architekturen}: Serviceorientierte Architekturen beinhalten ein Set von Designprinzipien, die während der Softwareentwicklung und der Softwareintegration genutzt werden. Das Deployment von serviceorientierten Architekturen bietet ein lose gekoppeltes Set an Services, die über mehrere Businessgrenzen hinweg kommunizieren können.
+	\item \textbf{Virtualisierung}: Das Konzept der Virtualisierung befreit den User von Ressourcenkäufen und aufwändigen Installationen. Die Cloud bringt die Ressourcen zum User. Virtualisierung umfasst Hardware, Speicher, Speicherzugriff, Software, Daten und Netzwerke. Virtualisierung ist im Cloudumfeld zu einem unverzichtbaren Bestandteil geworden. Durch Virtualisierung können mehrere Applikationen am selben Server laufen und gemeinsam Ressourcen teilen. Durch verschiedene Host Operating Systeme ist die Konfiguration einiger Applikationen sehr umständlich. Auch dieses Problem löst Virtualisierung durch einfache Konfiguration und Aggregation von Ressourcen. Auch das schnelle Recovery-Management ist ein großer Pluspunkt bei Virtualisierung und bei Cloudtechnologien.
+\end{enumerate}
+
+Durch diese Vorteile sind Cloudtechnologien in den letzten Jahren immer wichtiger und populärer geworden. Ein Anbieter einer Software kann sich heutzutage Downtimes seines Produkts nicht mehr leisten. Viele Kunden wechseln durch die Fülle an Angeboten schnell zum Konkurrenten. Cloud Provider bieten durch Service Level Agreements meist eine Verfügbarkeit von über 99\%. Auch deshalb hosten viele Softwarefirmen nicht mehr selbst, sondern deployen diese in Cloudsysteme \cite{CloudComputing}.
+
+\section{Zielsetzung der Implementierung der Partnerdatenbank}
+Bei der 3 Banken IT GmbH gibt es zusätzlich zu den Kunden, wie der BKS Bank, der Oberbank und der BTV Vier Länder Bank, auch Partner, wie z.B. die FH Oberösterreich Campus Hagenberg oder die JKU Linz. Diese Partner werden aktuell in verschiedenen Datenquellen geführt.
+Die aktuellen Datenquellen der 3 Banken IT GmbH bestehen aus:
+\begin{itemize}
+	\item \textbf{FiPe-/Docsis-Liste} Sobald Dokumente gescannt werden, wird in der Firmenpersonalliste der Partner mit Kürzel, Name und laufender Nummer erfasst. Dadurch kann im Dokumentenmanagementsystem Docsis auf das Kürzel und die laufende Nummer aus der FiPe-Liste zugegriffen werden.
+	\item \textbf{SAP}: Sobald Rechnungen eintreffen, wird der Partner im SAP als Kreditor mit Name, Adresse und laufender Nummer aus der FiPe-Liste und Bankverbindungen erfasst.
+	\item \textbf{Art28\_Verträge\_Fernwartungszugänge\_VPE}: Diese Daten werden ab der Angebotsanfrage/Ausschreibung benötigt.
+	\item Ansprechpersonen mit \textbf{Kontaktdaten} von den Anwendungsverantwortlichen bei den einzelnen Mitarbeitern.
+\end{itemize}
+
+Ziel der Partnerdatenbank ist die Ablöse der Art28\_Verträge\_Fernwartungszugänge\_VPE und der FiPe-Liste.
+Weitere funktionale Anforderungen werden wie folgt definiert:
+\begin{itemize}
+	\item Es können Unternehmen als Partner angelegt werden.
+	\item Zu diesen Unternehmen können Kontaktpersonen hinzugefügt werden.
+	\item Zu Kontaktpersonen gehören verschiedene Links im Docsis. Auch diese werden in der Applikation angezeigt.
+	\item Die Ersterfassung eines Partners ist durch jeden Mitarbeiter möglich.
+	\item Es besteht die Möglichkeit einen Kontakt als privat oder öffentlich zu markieren. Dies ist wichtig, wenn jemand seine Visitenkarten darin verwaltet.
+	\item Der Basiseintrag einer Firma ist generell öffentlich. Nur für Kontaktpersonen kann ein privater Status angegeben werden.
+\end{itemize}
+Zu den nicht-funktionalen Anforderungen zählen:
+\begin{itemize}
+	\item eine Microsoft SQL Server Datenbank,
+	\item Spring-Boot als Backendtechnologie,
+	\item Angular als Frontendtechnologie,
+	\item ein rollenbasierter Login mit Username und Passwort,
+	\item das Backend als Microservice-Architektur,
+	\item eine Infrastruktur zum Deployment in OpenShift.
+\end{itemize}
+
+Weiters sollen zusätzliche Tools eingebunden werden, die bei der Entwicklung von Microservices und dem Deployment in OpenShift helfen. Zu diesen Tools zählen:
+\begin{itemize}
+	\item \textbf{Jenkins} dient für automatisierte Test-, Build- und Deployment-Pipelines.
+	\item \textbf{Spring-Retry} dient zur Fehlerbehandlung speziell bei Microservices.
+	\item \textbf{Swagger} dient zur REST-Schnittstellenbeschreibung.
+	\item \textbf{Jaeger} dient zum Tracing von Serviceaufrufen.
+	\item \textbf{Docker} dient zur Containerisierung der einzelnen Services.
+	\item \textbf{Fabric8} dient zum Deployment der Services in OpenShift.
+\end{itemize}
+
+Durch die Anwendung dieser Tools, der Microservice-Architektur und dem Deployment in OpenShift soll der 3 Banken IT GmbH ein Prototyp einerseits für die Weiterentwicklung der Partnerdatenbank, andererseits eine Schablone für weitere Anwendungen geboten werden.
+
+\section{Ziel des Deployments der Partnerdatenbank in OpenShift}
+Cloud Services, wie OpenShift, weisen grundsätzlich folgende drei Charaktereigenschaften auf:
+\begin{enumerate}
+	\item Nutzer können eine große Anzahl an Ressourcen jederzeit nutzen.
+	\item Cloud Services sind elastisch. Ein Nutzer kann jederzeit so viele Ressourcen wie möglich und so viele wie nötig nutzen.
+	\item Das Service wird gänzlich vom Provider gemanagt. Die Nutzer benötigen lediglich Internetzugang und Rechner, um die Services aufzurufen. 
+\end{enumerate}
+
+Durch die Nutzung von OpenShift und das Deployment der Anwendung in OpenShift muss die 3 Banken IT GmbH keine eigenen Ressourcen zum Hosten der Anwendung bereitstellen. Der Cloud Provider kümmert sich um die Aufrechterhaltung der Infrastruktur.
+
+OpenShift ist eine Open-Source Platform-as-a-Service Plattform. OpenShift bietet automatische Installation, Upgrades und Lifecycle-Management des gesamten Container Stacks auf jeder Cloud Plattform. Zum Container Stack gehören das Betriebssystem, Kubernetes, Cluster Services und Applikationen \cite{OpenShiftOnline}.
+
+OpenShift hilft Teams auch beim schnellen und agilen Erstellen von Anwendungen. Dadurch, dass Befehle in der Dev-Stage dieselben wie in der Production-Stage sind, können Entwickler noch sicherer und einfacher Applikationen entwickeln. Gerade bei Software für Banken ist die Sicherheit wesentlich.
+
+Auch dadurch, dass die 3 Banken IT GmbH bereits Applikationen in OpenShift deployt, ist die Wahl der Cloud-Infrastruktur der Partnerdatenbank auf OpenShift gefallen.
+
+\section{Leitfaden und Gliederung der Schrift}
+Die Schrift gliedert sich in folgende neun Kapitel:
+\begin{enumerate}
+	\item \textbf{Einleitung}: In diesem Kapitel wird die Motivation von Microservices und Cloudtechnologien beschrieben. Auch die Zielsetzung der Implementierung der Partnerdatenbank, sowie das Ziel des Deployments in OpenShift wird erklärt.
+	\item \textbf{Serviceorientierte Architektur und Microservices}: In diesem Kapitel wird die Abgrenzung serviceorientierter Architekturen zu Microservices beschrieben. Auch ein Vergleich mit monolithischen Architekturen und die Charakteristiken sowie die Vor- und Nachteile von Microservices werden gezeigt.
+	\item \textbf{Containerisierung mit Docker}: In diesem Kapitel wird die Notwendigkeit der Containerisierung von Cloud-Applikationen am Beispiel von Docker gezeigt.
+	\item \textbf{OpenShift}: In diesem Kapitel werden OpenShift sowie die Container-as-a-Service-Plattform Kubernetes, auf welcher OpenShift aufsetzt, gezeigt.
+	\item \textbf{Partnerdatenbank}: In diesem Kapitel werden der Grundaufbau und Zweck der Partnerdatenbank, sowie die Beschreibung der Backends und des Frontends gezeigt.
+	\item \textbf{Implementierung der Partnerdatenbank}: In diesem Kapitel werden die Implementierung der Partnerdatenbank und auch die Integration der Tools, wie Jenkins, Swagger oder Jaeger, gezeigt.
+	\item \textbf{Evaluierung der Anwendung}: In diesem Kapitel werden die Architekturevaluierung, Evaluierung des Frontends und Whitebox- sowie Blackbox-Tests gezeigt.
+	\item Abschließend gibt der Verfasser eine \textbf{Zusammenfassung} und einen Ausblick über die weitere Entwicklung der Partnerdatenbank.
+\end{enumerate}
