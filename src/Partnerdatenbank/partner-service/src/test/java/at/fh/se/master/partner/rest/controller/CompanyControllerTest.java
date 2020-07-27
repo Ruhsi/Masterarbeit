@@ -34,7 +34,7 @@ public class CompanyControllerTest {
         hagenberg = new Company();
         hagenberg.setCreditorNumber("C0000");
         hagenberg.setCreditorName("FH Oberösterreich Campus Hagenberg");
-        hagenberg.setCreditorStatus('J');
+        hagenberg.setCreditorStatus("J");
         hagenberg.setShortName("JKU");
         hagenberg.setAendCounter(1);
         hagenberg.setMandant("JKU");
@@ -67,7 +67,7 @@ public class CompanyControllerTest {
         Company jku = new Company();
         jku.setCreditorNumber("C1000");
         jku.setCreditorName("Johannes Kepler Universität Linz - JKU");
-        jku.setCreditorStatus('J');
+        jku.setCreditorStatus("J");
         jku.setShortName("JKU");
         jku.setAendCounter(1);
         jku.setMandant("JKU");

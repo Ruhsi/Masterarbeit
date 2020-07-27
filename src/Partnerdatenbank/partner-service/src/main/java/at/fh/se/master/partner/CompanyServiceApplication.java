@@ -14,6 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Profile;
+import org.springframework.retry.annotation.EnableRetry;
 import org.springframework.web.filter.CommonsRequestLoggingFilter;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -29,6 +30,7 @@ import java.util.Set;
 @SpringBootApplication
 @EnableSwagger2
 @EnableAspectJAutoProxy(proxyTargetClass = true)
+@EnableRetry
 public class CompanyServiceApplication {
 
     public static void main(String[] args) {
@@ -79,7 +81,7 @@ public class CompanyServiceApplication {
             Company hagenberg = new Company();
             hagenberg.setCreditorNumber("C0000");
             hagenberg.setCreditorName("FH Oberösterreich Campus Hagenberg");
-            hagenberg.setCreditorStatus('J');
+            hagenberg.setCreditorStatus("J");
             hagenberg.setShortName("JKU");
             hagenberg.setAendCounter(1);
             hagenberg.setMandant("JKU");
@@ -99,7 +101,7 @@ public class CompanyServiceApplication {
             Company jku = new Company();
             jku.setCreditorNumber("C1000");
             jku.setCreditorName("Johannes Kepler Universität Linz - JKU");
-            jku.setCreditorStatus('J');
+            jku.setCreditorStatus("J");
             jku.setShortName("JKU");
             jku.setAendCounter(1);
             jku.setMandant("JKU");
@@ -156,7 +158,7 @@ public class CompanyServiceApplication {
         affenzeller.setPhoneNumbers(phoneNumbers);
         affenzeller.setTopic("Professor of Heuristic Optimisation/Machine Learning");
 
-        hagenerg.setPartners(new ArrayList<>() {{
+        hagenerg.setPartners(new ArrayList() {{
             add(affenzeller);
         }});
     }
@@ -225,7 +227,7 @@ public class CompanyServiceApplication {
         dastel.setPhoneNumbers(phoneNumbers);
 
 
-        jku.setPartners(new ArrayList<>() {{
+        jku.setPartners(new ArrayList() {{
             add(altrichter);
             add(dastel);
         }});

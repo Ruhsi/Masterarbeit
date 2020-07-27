@@ -107,7 +107,7 @@ public class PartnerControllerTest {
         hagenberg = new Company();
         hagenberg.setCreditorNumber("C0000");
         hagenberg.setCreditorName("FH Oberösterreich Campus Hagenberg");
-        hagenberg.setCreditorStatus('J');
+        hagenberg.setCreditorStatus("J");
         hagenberg.setShortName("JKU");
         hagenberg.setAendCounter(1);
         hagenberg.setMandant("JKU");

@@ -56,7 +56,7 @@ public class Company {
     private String creditorName;
 
     @Column(name = "KREDITORSTATUS", nullable = false)
-    private Character creditorStatus;
+    private String creditorStatus;
 
     @Column(name = "KONTONR_SAP_ALT")
     @NotEmpty
